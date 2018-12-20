@@ -28,6 +28,7 @@
             android:theme="@style/Theme.Design.NoActionBar" />
         <activity android:name=".imgcrop.ImageCropActivity" />
         <activity android:name=".keyboard.KeyBoardActivity" />
+        <activity android:name=".animation.AnimationActivity" />
     </application>
 
 </manifest>

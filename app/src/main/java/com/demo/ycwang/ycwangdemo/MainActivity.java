@@ -54,4 +54,9 @@ public class MainActivity extends AppCompatActivity {
     void onClickKeyBoard() {
         LaunchUtil.launchKeyBoard(this);
     }
+
+    @OnClick(R.id.txw_animation)
+    void onClickAnimation() {
+        LaunchUtil.launchAnimation(this);
+    }
 }
