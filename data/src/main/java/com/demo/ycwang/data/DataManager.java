@@ -14,7 +14,7 @@ import java.util.List;
  * @Author: ycwang
  * @Date: 2018-12-21 10:57
  */
-public class DataManager implements DataSource {
+public class DataManager implements DataHelper {
     private LocalDataUserHelper localDataHelper;
     private RemoteDataHelper remoteDataHelper;
 
