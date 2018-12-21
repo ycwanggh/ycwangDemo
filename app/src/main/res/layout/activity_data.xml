@@ -6,48 +6,59 @@
 
 
     <TextView
-        android:id="@+id/add_one"
+        android:id="@+id/txw_insert_one"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
         android:background="@color/colorPrimary"
         android:gravity="center"
-        android:text="增"
+        android:text="插入一条记录"
         android:textColor="#FFFFFF"
         android:textSize="20dp" />
 
     <TextView
-        android:id="@+id/add_all"
+        android:id="@+id/txw_insert_all"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
         android:background="@color/colorPrimary"
         android:gravity="center"
-        android:text="增"
-        android:textColor="#FFFFFF"
-        android:textSize="20dp" />
-
-
-    <TextView
-        android:id="@+id/delete_one"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:background="@color/colorPrimary"
-        android:gravity="center"
-        android:text="增"
+        android:text="插入一列数据记录"
         android:textColor="#FFFFFF"
         android:textSize="20dp" />
 
 
     <TextView
-        android:id="@+id/delete_all"
+        android:id="@+id/txw_query"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
         android:background="@color/colorPrimary"
         android:gravity="center"
-        android:text="增"
+        android:text="查询指定ID数据"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp" />
+
+
+    <TextView
+        android:id="@+id/txw_query_all"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="查询所有数据"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/txw_update"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="更新指定对象数据"
         android:textColor="#FFFFFF"
         android:textSize="20dp" />
 

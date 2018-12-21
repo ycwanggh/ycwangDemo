@@ -21,22 +21,27 @@ public class DBUserManager implements DBUserHelper {
 
 
     @Override
-    public List<User> getUsers() {
+    public List<User> queryAll() {
         return greenDaoManager.queryAll(User.class);
     }
 
     @Override
-    public User getUser(String id) {
+    public User query(String id) {
         return greenDaoManager.queryByKey(User.class, id);
     }
 
     @Override
-    public void setUser(User user) {
-        greenDaoManager.insertOrUpdate(user);
+    public void insert(User user) {
+        greenDaoManager.insert(user);
     }
 
     @Override
-    public void setUsers(List<User> list) {
-        greenDaoManager.insertOrUpdate(list);
+    public void insertAll(List<User> list) {
+        greenDaoManager.insert(list);
+    }
+
+    @Override
+    public void update(User user) {
+        greenDaoManager.insertOrUpdate(user);
     }
 }

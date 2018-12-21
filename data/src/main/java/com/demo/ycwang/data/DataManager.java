@@ -53,23 +53,29 @@ public class DataManager implements DataSource {
         localDataHelper.setUserPhone(phone);
     }
 
+
     @Override
-    public List<User> getUsers() {
-        return localDataHelper.getUsers();
+    public List<User> queryAll() {
+        return localDataHelper.queryAll();
     }
 
     @Override
-    public User getUser(String id) {
-        return localDataHelper.getUser(id);
+    public User query(String id) {
+        return localDataHelper.query(id);
     }
 
     @Override
-    public void setUser(User user) {
-        localDataHelper.setUser(user);
+    public void insert(User user) {
+        localDataHelper.insert(user);
     }
 
     @Override
-    public void setUsers(List<User> list) {
-        localDataHelper.setUsers(list);
+    public void insertAll(List<User> list) {
+        localDataHelper.insertAll(list);
+    }
+
+    @Override
+    public void update(User user) {
+        localDataHelper.update(user);
     }
 }

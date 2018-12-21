@@ -11,13 +11,15 @@ import java.util.List;
 public interface DBUserHelper {
 
 
-    List<User> getUsers();
+    List<User> queryAll();
 
-    User getUser(String id);
+    User query(String id);
 
-    void setUser(User user);
+    void insert(User user);
 
-    void setUsers(List<User> list);
+    void insertAll(List<User> list);
+
+    void update(User user);
 
 
 }

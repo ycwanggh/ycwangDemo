@@ -54,23 +54,29 @@ public class LocalDataManager implements LocalDataUserHelper {
         prefsHelper.setUserPhone(phone);
     }
 
+
     @Override
-    public List<User> getUsers() {
-        return dbHelper.getUsers();
+    public List<User> queryAll() {
+        return dbHelper.queryAll();
     }
 
     @Override
-    public User getUser(String id) {
-        return dbHelper.getUser(id);
+    public User query(String id) {
+        return dbHelper.query(id);
     }
 
     @Override
-    public void setUser(User user) {
-        dbHelper.setUser(user);
+    public void insert(User user) {
+        dbHelper.insert(user);
     }
 
     @Override
-    public void setUsers(List<User> list) {
-        dbHelper.setUsers(list);
+    public void insertAll(List<User> list) {
+        dbHelper.insertAll(list);
+    }
+
+    @Override
+    public void update(User user) {
+        dbHelper.update(user);
     }
 }
