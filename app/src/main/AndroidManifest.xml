@@ -3,6 +3,7 @@
     package="com.demo.ycwang.ycwangdemo">
 
     <application
+        android:name=".app.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -30,6 +31,7 @@
         <activity android:name=".keyboard.KeyBoardActivity" />
         <activity android:name=".animation.AnimationActivity" />
         <activity android:name=".textutils.TextUtilsCopyActivity" />
+        <activity android:name=".data.DataActivity" />
     </application>
 
 </manifest>

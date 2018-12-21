@@ -1,8 +1,8 @@
-package com.demo.ycwang.ycwangdemo.utils;
+package com.demo.ycwang.data.local.prefs.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.support.annotation.NonNull;
+
 import android.text.TextUtils;
 
 import java.util.Collections;
@@ -78,7 +78,7 @@ public final class SPUtils {
      * @param key   The key of sp.
      * @param value The value of sp.
      */
-    public void put(@NonNull final String key, final String value) {
+    public void put(final String key, final String value) {
         put(key, value, false);
     }
 
@@ -90,7 +90,7 @@ public final class SPUtils {
      * @param isCommit True to use {@link SharedPreferences.Editor#commit()},
      *                 false to use {@link SharedPreferences.Editor#apply()}
      */
-    public void put(@NonNull final String key, final String value, final boolean isCommit) {
+    public void put(final String key, final String value, final boolean isCommit) {
         if (isCommit) {
             sp.edit().putString(key, value).commit();
         } else {
@@ -104,7 +104,7 @@ public final class SPUtils {
      * @param key The key of sp.
      * @return the string value if sp exists or {@code ""} otherwise
      */
-    public String getString(@NonNull final String key) {
+    public String getString(final String key) {
         return getString(key, "");
     }
 
@@ -115,7 +115,7 @@ public final class SPUtils {
      * @param defaultValue The default value if the sp doesn't exist.
      * @return the string value if sp exists or {@code defaultValue} otherwise
      */
-    public String getString(@NonNull final String key, final String defaultValue) {
+    public String getString(final String key, final String defaultValue) {
         return sp.getString(key, defaultValue);
     }
 
@@ -125,7 +125,7 @@ public final class SPUtils {
      * @param key   The key of sp.
      * @param value The value of sp.
      */
-    public void put(@NonNull final String key, final int value) {
+    public void put(final String key, final int value) {
         put(key, value, false);
     }
 
@@ -137,7 +137,7 @@ public final class SPUtils {
      * @param isCommit True to use {@link SharedPreferences.Editor#commit()},
      *                 false to use {@link SharedPreferences.Editor#apply()}
      */
-    public void put(@NonNull final String key, final int value, final boolean isCommit) {
+    public void put(final String key, final int value, final boolean isCommit) {
         if (isCommit) {
             sp.edit().putInt(key, value).commit();
         } else {
@@ -151,7 +151,7 @@ public final class SPUtils {
      * @param key The key of sp.
      * @return the int value if sp exists or {@code -1} otherwise
      */
-    public int getInt(@NonNull final String key) {
+    public int getInt(final String key) {
         return getInt(key, -1);
     }
 
@@ -162,7 +162,7 @@ public final class SPUtils {
      * @param defaultValue The default value if the sp doesn't exist.
      * @return the int value if sp exists or {@code defaultValue} otherwise
      */
-    public int getInt(@NonNull final String key, final int defaultValue) {
+    public int getInt(final String key, final int defaultValue) {
         return sp.getInt(key, defaultValue);
     }
 
@@ -172,7 +172,7 @@ public final class SPUtils {
      * @param key   The key of sp.
      * @param value The value of sp.
      */
-    public void put(@NonNull final String key, final long value) {
+    public void put(final String key, final long value) {
         put(key, value, false);
     }
 
@@ -184,7 +184,7 @@ public final class SPUtils {
      * @param isCommit True to use {@link SharedPreferences.Editor#commit()},
      *                 false to use {@link SharedPreferences.Editor#apply()}
      */
-    public void put(@NonNull final String key, final long value, final boolean isCommit) {
+    public void put(final String key, final long value, final boolean isCommit) {
         if (isCommit) {
             sp.edit().putLong(key, value).commit();
         } else {
@@ -198,7 +198,7 @@ public final class SPUtils {
      * @param key The key of sp.
      * @return the long value if sp exists or {@code -1} otherwise
      */
-    public long getLong(@NonNull final String key) {
+    public long getLong(final String key) {
         return getLong(key, -1L);
     }
 
@@ -209,7 +209,7 @@ public final class SPUtils {
      * @param defaultValue The default value if the sp doesn't exist.
      * @return the long value if sp exists or {@code defaultValue} otherwise
      */
-    public long getLong(@NonNull final String key, final long defaultValue) {
+    public long getLong(final String key, final long defaultValue) {
         return sp.getLong(key, defaultValue);
     }
 
@@ -219,7 +219,7 @@ public final class SPUtils {
      * @param key   The key of sp.
      * @param value The value of sp.
      */
-    public void put(@NonNull final String key, final float value) {
+    public void put(final String key, final float value) {
         put(key, value, false);
     }
 
@@ -231,7 +231,7 @@ public final class SPUtils {
      * @param isCommit True to use {@link SharedPreferences.Editor#commit()},
      *                 false to use {@link SharedPreferences.Editor#apply()}
      */
-    public void put(@NonNull final String key, final float value, final boolean isCommit) {
+    public void put(final String key, final float value, final boolean isCommit) {
         if (isCommit) {
             sp.edit().putFloat(key, value).commit();
         } else {
@@ -245,7 +245,7 @@ public final class SPUtils {
      * @param key The key of sp.
      * @return the float value if sp exists or {@code -1f} otherwise
      */
-    public float getFloat(@NonNull final String key) {
+    public float getFloat(final String key) {
         return getFloat(key, -1f);
     }
 
@@ -256,7 +256,7 @@ public final class SPUtils {
      * @param defaultValue The default value if the sp doesn't exist.
      * @return the float value if sp exists or {@code defaultValue} otherwise
      */
-    public float getFloat(@NonNull final String key, final float defaultValue) {
+    public float getFloat(final String key, final float defaultValue) {
         return sp.getFloat(key, defaultValue);
     }
 
@@ -266,7 +266,7 @@ public final class SPUtils {
      * @param key   The key of sp.
      * @param value The value of sp.
      */
-    public void put(@NonNull final String key, final boolean value) {
+    public void put(final String key, final boolean value) {
         put(key, value, false);
     }
 
@@ -278,7 +278,7 @@ public final class SPUtils {
      * @param isCommit True to use {@link SharedPreferences.Editor#commit()},
      *                 false to use {@link SharedPreferences.Editor#apply()}
      */
-    public void put(@NonNull final String key, final boolean value, final boolean isCommit) {
+    public void put(final String key, final boolean value, final boolean isCommit) {
         if (isCommit) {
             sp.edit().putBoolean(key, value).commit();
         } else {
@@ -292,7 +292,7 @@ public final class SPUtils {
      * @param key The key of sp.
      * @return the boolean value if sp exists or {@code false} otherwise
      */
-    public boolean getBoolean(@NonNull final String key) {
+    public boolean getBoolean(final String key) {
         return getBoolean(key, false);
     }
 
@@ -303,7 +303,7 @@ public final class SPUtils {
      * @param defaultValue The default value if the sp doesn't exist.
      * @return the boolean value if sp exists or {@code defaultValue} otherwise
      */
-    public boolean getBoolean(@NonNull final String key, final boolean defaultValue) {
+    public boolean getBoolean(final String key, final boolean defaultValue) {
         return sp.getBoolean(key, defaultValue);
     }
 
@@ -313,7 +313,7 @@ public final class SPUtils {
      * @param key   The key of sp.
      * @param value The value of sp.
      */
-    public void put(@NonNull final String key, final Set<String> value) {
+    public void put(final String key, final Set<String> value) {
         put(key, value, false);
     }
 
@@ -325,7 +325,7 @@ public final class SPUtils {
      * @param isCommit True to use {@link SharedPreferences.Editor#commit()},
      *                 false to use {@link SharedPreferences.Editor#apply()}
      */
-    public void put(@NonNull final String key,
+    public void put(final String key,
                     final Set<String> value,
                     final boolean isCommit) {
         if (isCommit) {
@@ -342,7 +342,7 @@ public final class SPUtils {
      * @return the set of string value if sp exists
      * or {@code Collections.<String>emptySet()} otherwise
      */
-    public Set<String> getStringSet(@NonNull final String key) {
+    public Set<String> getStringSet(final String key) {
         return getStringSet(key, Collections.<String>emptySet());
     }
 
@@ -353,7 +353,7 @@ public final class SPUtils {
      * @param defaultValue The default value if the sp doesn't exist.
      * @return the set of string value if sp exists or {@code defaultValue} otherwise
      */
-    public Set<String> getStringSet(@NonNull final String key,
+    public Set<String> getStringSet(final String key,
                                     final Set<String> defaultValue) {
         return sp.getStringSet(key, defaultValue);
     }
@@ -373,7 +373,7 @@ public final class SPUtils {
      * @param key The key of sp.
      * @return {@code true}: yes<br>{@code false}: no
      */
-    public boolean contains(@NonNull final String key) {
+    public boolean contains(final String key) {
         return sp.contains(key);
     }
 
@@ -382,7 +382,7 @@ public final class SPUtils {
      *
      * @param key The key of sp.
      */
-    public void remove(@NonNull final String key) {
+    public void remove(final String key) {
         remove(key, false);
     }
 
@@ -393,7 +393,7 @@ public final class SPUtils {
      * @param isCommit True to use {@link SharedPreferences.Editor#commit()},
      *                 false to use {@link SharedPreferences.Editor#apply()}
      */
-    public void remove(@NonNull final String key, final boolean isCommit) {
+    public void remove(final String key, final boolean isCommit) {
         if (isCommit) {
             sp.edit().remove(key).commit();
         } else {

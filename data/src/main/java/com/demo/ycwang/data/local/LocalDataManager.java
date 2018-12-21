@@ -1,0 +1,76 @@
+package com.demo.ycwang.data.local;
+
+import android.content.Context;
+
+import com.demo.ycwang.data.local.db.user.DBUserHelper;
+import com.demo.ycwang.data.local.db.user.DBUserManager;
+import com.demo.ycwang.data.local.db.entity.User;
+import com.demo.ycwang.data.local.prefs.PrefsHelper;
+import com.demo.ycwang.data.local.prefs.PrefsManager;
+
+import java.util.List;
+
+/**
+ * @Author: ycwang
+ * @Date: 2018-12-21 11:30
+ */
+public class LocalDataManager implements LocalDataUserHelper {
+
+    private PrefsHelper prefsHelper;
+    private DBUserHelper dbHelper;
+
+    public LocalDataManager(Context context) {
+        prefsHelper = new PrefsManager(context);
+        dbHelper = new DBUserManager(context);
+    }
+
+    @Override
+    public String getUserID() {
+        return prefsHelper.getUserID();
+    }
+
+    @Override
+    public String getUserName() {
+        return prefsHelper.getUserName();
+    }
+
+    @Override
+    public String getUserPhone() {
+        return prefsHelper.getUserPhone();
+    }
+
+    @Override
+    public void setUserID(String id) {
+        prefsHelper.setUserID(id);
+    }
+
+    @Override
+    public void setUserName(String name) {
+        prefsHelper.setUserName(name);
+    }
+
+    @Override
+    public void setUserPhone(String phone) {
+        prefsHelper.setUserPhone(phone);
+    }
+
+    @Override
+    public List<User> getUsers() {
+        return dbHelper.getUsers();
+    }
+
+    @Override
+    public User getUser(String id) {
+        return dbHelper.getUser(id);
+    }
+
+    @Override
+    public void setUser(User user) {
+        dbHelper.setUser(user);
+    }
+
+    @Override
+    public void setUsers(List<User> list) {
+        dbHelper.setUsers(list);
+    }
+}

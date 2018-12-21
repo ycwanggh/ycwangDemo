@@ -64,4 +64,9 @@ public class MainActivity extends AppCompatActivity {
     void onClickTextUtils() {
         LaunchUtil.launchTextUtils(this);
     }
+
+    @OnClick(R.id.txw_data)
+    void onClickData() {
+        LaunchUtil.launchData(this);
+    }
 }

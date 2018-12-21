@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 
 import com.demo.ycwang.ycwangdemo.animation.AnimationActivity;
+import com.demo.ycwang.ycwangdemo.data.DataActivity;
 import com.demo.ycwang.ycwangdemo.edittext.SpaceEditTextActivity;
 import com.demo.ycwang.ycwangdemo.imgcrop.ImageCropActivity;
 import com.demo.ycwang.ycwangdemo.keyboard.KeyBoardActivity;
@@ -71,6 +72,11 @@ public class LaunchUtil {
 
     public static void launchTextUtils(Context context) {
         Intent intent = new Intent(context, TextUtilsCopyActivity.class);
+        context.startActivity(intent);
+    }
+
+    public static void launchData(Context context) {
+        Intent intent = new Intent(context, DataActivity.class);
         context.startActivity(intent);
     }
 
