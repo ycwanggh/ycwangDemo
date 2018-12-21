@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".viewdraghelper.ViewDragHelperActivity" />
-        <activity android:name=".recylerview.RecyclerViewActivity" />
+        <activity android:name=".recyclerview.RecyclerViewActivity" />
         <activity
             android:name=".tab.TabActivity"
             android:theme="@style/Theme.Design.NoActionBar" />
@@ -29,6 +29,7 @@
         <activity android:name=".imgcrop.ImageCropActivity" />
         <activity android:name=".keyboard.KeyBoardActivity" />
         <activity android:name=".animation.AnimationActivity" />
+        <activity android:name=".textutils.TextUtilsCopyActivity" />
     </application>
 
 </manifest>

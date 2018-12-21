@@ -1,4 +1,4 @@
-package com.demo.ycwang.ycwangdemo.recylerview;
+package com.demo.ycwang.ycwangdemo.recyclerview;
 
 import android.app.Activity;
 import android.os.Bundle;

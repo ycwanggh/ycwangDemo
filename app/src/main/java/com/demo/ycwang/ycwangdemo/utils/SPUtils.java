@@ -3,6 +3,7 @@ package com.demo.ycwang.ycwangdemo.utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
+import android.text.TextUtils;
 
 import java.util.Collections;
 import java.util.Map;
@@ -52,7 +53,9 @@ public final class SPUtils {
      * @return the single {@link SPUtils} instance
      */
     public static SPUtils getInstance(Context context, String spName, final int mode) {
-        if (isSpace(spName)) spName = "spUtils";
+        if (TextUtils.isEmpty(spName)) {
+            spName = "spUtils";
+        }
         SPUtils spUtils = SP_UTILS_MAP.get(spName);
         if (spUtils == null) {
             spUtils = new SPUtils(context, spName, mode);
@@ -419,13 +422,4 @@ public final class SPUtils {
         }
     }
 
-    private static boolean isSpace(final String s) {
-        if (s == null) return true;
-        for (int i = 0, len = s.length(); i < len; ++i) {
-            if (!Character.isWhitespace(s.charAt(i))) {
-                return false;
-            }
-        }
-        return true;
-    }
 }

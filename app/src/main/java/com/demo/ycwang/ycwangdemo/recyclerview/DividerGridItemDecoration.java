@@ -1,4 +1,4 @@
-package com.demo.ycwang.ycwangdemo.recylerview;
+package com.demo.ycwang.ycwangdemo.recyclerview;
 
 import android.content.Context;
 import android.content.res.TypedArray;

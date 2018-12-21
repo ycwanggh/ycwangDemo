@@ -1,4 +1,4 @@
-package com.demo.ycwang.ycwangdemo.recylerview;
+package com.demo.ycwang.ycwangdemo.recyclerview;
 
 import android.graphics.Color;
 import android.support.v7.widget.GridLayoutManager;

@@ -22,22 +22,22 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.txw_recycler_view)
     void onClickRecyclerView() {
-        LaunchUtil.launchRecyclerViewActivity(this);
+        LaunchUtil.launchRecyclerView(this);
     }
 
     @OnClick(R.id.txw_slidingtray)
     void onClickSlideTray() {
-        LaunchUtil.launchSlidingtrayActivity(this);
+        LaunchUtil.launchSlidingTray(this);
     }
 
     @OnClick(R.id.txw_tab)
     void onClickTab() {
-        LaunchUtil.launchTabActivity(this);
+        LaunchUtil.launchTab(this);
     }
 
     @OnClick(R.id.txw_view_drag_helper)
     void onClickViewDragHelper() {
-        LaunchUtil.launchViewDragHelperActivity(this);
+        LaunchUtil.launchViewDragHelper(this);
     }
 
     @OnClick(R.id.txw_slide_tab)
@@ -58,5 +58,10 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.txw_animation)
     void onClickAnimation() {
         LaunchUtil.launchAnimation(this);
+    }
+
+    @OnClick(R.id.txw_text_utils)
+    void onClickTextUtils() {
+        LaunchUtil.launchTextUtils(this);
     }
 }
