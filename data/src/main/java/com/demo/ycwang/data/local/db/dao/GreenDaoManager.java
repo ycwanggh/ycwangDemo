@@ -5,12 +5,11 @@ import android.content.Context;
 
 import com.demo.ycwang.data.local.db.greenDao.DaoMaster;
 import com.demo.ycwang.data.local.db.greenDao.DaoSession;
-import com.demo.ycwang.data.local.prefs.utils.Constance;
+import com.demo.ycwang.data.Constance;
 
 import org.greenrobot.greendao.AbstractDao;
 import org.greenrobot.greendao.database.Database;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**

@@ -14,7 +14,7 @@ import java.util.List;
  * @Author: ycwang
  * @Date: 2018-12-21 11:30
  */
-public class LocalDataManager implements LocalDataUserHelper {
+public class LocalDataManager implements LocalDataHelper {
 
     private PrefsHelper prefsHelper;
     private DBUserHelper dbHelper;

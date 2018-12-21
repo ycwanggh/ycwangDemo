@@ -2,7 +2,7 @@ package com.demo.ycwang.data;
 
 import android.content.Context;
 
-import com.demo.ycwang.data.local.LocalDataUserHelper;
+import com.demo.ycwang.data.local.LocalDataHelper;
 import com.demo.ycwang.data.local.LocalDataManager;
 import com.demo.ycwang.data.local.db.entity.User;
 import com.demo.ycwang.data.remote.http.RemoteDataHelper;
@@ -14,8 +14,8 @@ import java.util.List;
  * @Author: ycwang
  * @Date: 2018-12-21 10:57
  */
-public class DataManager implements DataHelper {
-    private LocalDataUserHelper localDataHelper;
+public class DataManager implements LocalDataHelper, RemoteDataHelper {
+    private LocalDataHelper localDataHelper;
     private RemoteDataHelper remoteDataHelper;
 
     public DataManager(Context context) {

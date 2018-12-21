@@ -1,4 +1,4 @@
-package com.demo.ycwang.data.local.prefs.utils;
+package com.demo.ycwang.data;
 
 /**
  * @Author: ycwang
