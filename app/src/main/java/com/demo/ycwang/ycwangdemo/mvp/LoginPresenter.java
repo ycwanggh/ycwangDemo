@@ -1,5 +1,8 @@
 package com.demo.ycwang.ycwangdemo.mvp;
 
+import com.demo.ycwang.data.remote.http.callback.DataCallBack;
+import com.demo.ycwang.data.remote.http.response.Result;
+import com.demo.ycwang.data.remote.http.response.UserBean;
 import com.demo.ycwang.ycwangdemo.mvp.base.BPresenter;
 
 /**
@@ -13,16 +16,45 @@ public class LoginPresenter extends BPresenter<LoginContract.View, LoginModel> i
     public void requestLogin(String account, String password) {
 
         view.displayProgress();
-        model.catLogin(account, password, this);
+        model.catLogin(account, password, this, new DataCallBack<Result<UserBean>>() {
+            @Override
+            public void finish() {
+                view.dismissProgress();
+            }
 
+            @Override
+            public void success(Result<UserBean> data) {
+                view.loginSuccess();
 
+            }
+
+            @Override
+            public void error(int code, String message) {
+
+            }
+        });
     }
 
     @Override
     public void requestRegister(String account, String password) {
 
-        view.dismissProgress();
-        model.catRegister(account, password, this);
+        view.displayProgress();
+        model.catRegister(account, password, this, new DataCallBack<Result<UserBean>>() {
+            @Override
+            public void finish() {
+                view.dismissProgress();
+            }
+
+            @Override
+            public void success(Result<UserBean> data) {
+                view.switchToLogin();
+            }
+
+            @Override
+            public void error(int code, String message) {
+
+            }
+        });
 
     }
 }

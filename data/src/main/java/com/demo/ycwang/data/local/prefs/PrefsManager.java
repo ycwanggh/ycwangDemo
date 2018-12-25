@@ -36,6 +36,11 @@ public class PrefsManager implements PrefsHelper {
     }
 
     @Override
+    public String getRequestCookie() {
+        return userHelper.getRequestCookie();
+    }
+
+    @Override
     public void setUserID(String id) {
         userHelper.setUserID(id);
     }
@@ -48,5 +53,10 @@ public class PrefsManager implements PrefsHelper {
     @Override
     public void setUserPhone(String phone) {
         userHelper.setUserPhone(phone);
+    }
+
+    @Override
+    public void setRequestCookie(String cookie) {
+        userHelper.setRequestCookie(cookie);
     }
 }

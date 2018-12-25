@@ -40,6 +40,11 @@ public class LocalDataManager implements LocalDataHelper {
     }
 
     @Override
+    public String getRequestCookie() {
+        return null;
+    }
+
+    @Override
     public void setUserID(String id) {
         prefsHelper.setUserID(id);
     }
@@ -52,6 +57,11 @@ public class LocalDataManager implements LocalDataHelper {
     @Override
     public void setUserPhone(String phone) {
         prefsHelper.setUserPhone(phone);
+    }
+
+    @Override
+    public void setRequestCookie(String cookie) {
+
     }
 
 

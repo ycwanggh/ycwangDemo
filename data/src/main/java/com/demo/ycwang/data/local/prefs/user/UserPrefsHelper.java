@@ -12,10 +12,16 @@ public interface UserPrefsHelper {
 
     String getUserPhone();
 
+    String getRequestCookie();
+
     void setUserID(String id);
 
     void setUserName(String name);
 
     void setUserPhone(String phone);
+
+    void setRequestCookie(String cookie);
+
+
 
 }

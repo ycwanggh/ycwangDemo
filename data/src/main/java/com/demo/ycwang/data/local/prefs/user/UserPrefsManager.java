@@ -46,4 +46,14 @@ public class UserPrefsManager implements UserPrefsHelper {
     public void setUserPhone(String phone) {
         spUtils.put(Constance.USER_PHONE, phone);
     }
+
+    @Override
+    public void setRequestCookie(String cookie) {
+        spUtils.put(Constance.USER_REQUEST_COOKIE, cookie);
+    }
+
+    @Override
+    public String getRequestCookie() {
+        return spUtils.getString(Constance.USER_REQUEST_COOKIE);
+    }
 }

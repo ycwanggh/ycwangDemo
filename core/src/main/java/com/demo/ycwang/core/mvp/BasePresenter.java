@@ -15,6 +15,7 @@ public class BasePresenter<T extends BaseContract.View, E extends BaseContract.M
     }
 
     public void attach() {
+
     }
 
     public void detach() {

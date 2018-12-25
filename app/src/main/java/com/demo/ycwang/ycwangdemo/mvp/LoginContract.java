@@ -1,6 +1,10 @@
 package com.demo.ycwang.ycwangdemo.mvp;
 
+
 import com.demo.ycwang.core.mvp.BaseContract;
+import com.demo.ycwang.data.remote.http.callback.DataCallBack;
+import com.demo.ycwang.data.remote.http.response.Result;
+import com.demo.ycwang.data.remote.http.response.UserBean;
 import com.demo.ycwang.ycwangdemo.mvp.base.PresenterLife;
 
 /**
@@ -32,8 +36,8 @@ public interface LoginContract {
 
 
     interface Model extends BaseContract.Model {
-        void catLogin(String account, String password, PresenterLife presenterLife);
+        void catLogin(String account, String password, PresenterLife presenterLife, DataCallBack<Result<UserBean>> callback);
 
-        void catRegister(String account, String password, PresenterLife presenterLife);
+        void catRegister(String account, String password, PresenterLife presenterLife, DataCallBack<Result<UserBean>> callback);
     }
 }

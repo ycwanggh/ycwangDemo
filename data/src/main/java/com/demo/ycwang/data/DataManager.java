@@ -7,8 +7,13 @@ import com.demo.ycwang.data.local.LocalDataManager;
 import com.demo.ycwang.data.local.db.entity.User;
 import com.demo.ycwang.data.remote.http.RemoteDataHelper;
 import com.demo.ycwang.data.remote.http.RemoteDataManager;
+import com.demo.ycwang.data.remote.http.callback.DataCallBack;
+import com.demo.ycwang.data.remote.http.response.Result;
+import com.demo.ycwang.data.remote.http.response.UserBean;
 
 import java.util.List;
+
+import retrofit2.Callback;
 
 /**
  * @Author: ycwang
@@ -20,7 +25,7 @@ public class DataManager implements LocalDataHelper, RemoteDataHelper {
 
     public DataManager(Context context) {
         this.localDataHelper = new LocalDataManager(context);
-        this.remoteDataHelper = new RemoteDataManager(context);
+        this.remoteDataHelper = RemoteDataManager.getInstance();
     }
 
     @Override
@@ -39,6 +44,11 @@ public class DataManager implements LocalDataHelper, RemoteDataHelper {
     }
 
     @Override
+    public String getRequestCookie() {
+        return localDataHelper.getRequestCookie();
+    }
+
+    @Override
     public void setUserID(String id) {
         localDataHelper.setUserID(id);
     }
@@ -51,6 +61,11 @@ public class DataManager implements LocalDataHelper, RemoteDataHelper {
     @Override
     public void setUserPhone(String phone) {
         localDataHelper.setUserPhone(phone);
+    }
+
+    @Override
+    public void setRequestCookie(String cookie) {
+        localDataHelper.setRequestCookie(cookie);
     }
 
 
@@ -77,5 +92,15 @@ public class DataManager implements LocalDataHelper, RemoteDataHelper {
     @Override
     public void update(User user) {
         localDataHelper.update(user);
+    }
+
+    @Override
+    public void postLogin(String username, String password, Callback<Result<UserBean>> callback) {
+        remoteDataHelper.postLogin(username, password, callback);
+    }
+
+    @Override
+    public void postRegister(String username, String password, Callback<Result<UserBean>> callback) {
+        remoteDataHelper.postRegister(username, password, callback);
     }
 }

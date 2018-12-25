@@ -10,6 +10,9 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+
+        buildConfigField "String", "BASE_URL", "$baseUrl"
     }
 
     greendao {
@@ -28,7 +31,10 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.greenrobot:greendao:$rootProject.ext.greenDaoVersion"
-    implementation "org.greenrobot:greendao-generator:$rootProject.ext.greenDaoVersion"
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.greenrobot:greendao:$greenDaoVersion"
+    implementation "org.greenrobot:greendao-generator:$greenDaoVersion"
+    compileOnly "com.squareup.okhttp3:logging-interceptor:$okhttp3"
+    compileOnly "com.squareup.retrofit2:retrofit:$retrofit"
+    compileOnly "com.squareup.retrofit2:converter-gson:$retrofit"
 }

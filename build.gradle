@@ -28,6 +28,7 @@ task clean(type: Delete) {
 
 
 ext {
+    baseUrl = '"http://www.wanandroid.com/"'
 
     compileSdkVersion = 28
     minSdkVersion = 15
@@ -37,5 +38,7 @@ ext {
     designVersion = '28.0.0'
     onstraintLayoutVersion = '1.1.3'
     greenDaoVersion = '3.2.2'
+    retrofit = '2.0.2'
+    okhttp3 = '3.6.0'
 
 }

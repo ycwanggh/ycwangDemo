@@ -15,4 +15,5 @@ public class BPresenter<T extends BaseContract.View, E extends BaseContract.Mode
     public boolean isEnd() {
         return view == null;
     }
+
 }
