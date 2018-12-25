@@ -1,6 +1,5 @@
 package com.demo.ycwang.data.remote.http;
 
-import com.demo.ycwang.data.remote.http.callback.DataCallBack;
 import com.demo.ycwang.data.remote.http.response.Result;
 import com.demo.ycwang.data.remote.http.response.UserBean;
 

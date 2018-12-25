@@ -7,7 +7,6 @@ import com.demo.ycwang.data.local.LocalDataManager;
 import com.demo.ycwang.data.local.db.entity.User;
 import com.demo.ycwang.data.remote.http.RemoteDataHelper;
 import com.demo.ycwang.data.remote.http.RemoteDataManager;
-import com.demo.ycwang.data.remote.http.callback.DataCallBack;
 import com.demo.ycwang.data.remote.http.response.Result;
 import com.demo.ycwang.data.remote.http.response.UserBean;
 
