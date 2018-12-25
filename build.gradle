@@ -33,7 +33,7 @@ ext {
     minSdkVersion = 15
     targetSdkVersion = 28
 
-    butterknifeVersion = '8.5.1'
+    butterknifeVersion = '8.8.1'
     designVersion = '28.0.0'
     onstraintLayoutVersion = '1.1.3'
     greenDaoVersion = '3.2.2'

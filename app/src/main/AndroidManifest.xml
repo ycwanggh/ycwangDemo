@@ -32,6 +32,7 @@
         <activity android:name=".animation.AnimationActivity" />
         <activity android:name=".textutils.TextUtilsCopyActivity" />
         <activity android:name=".data.DataActivity" />
+        <activity android:name=".mvp.PresenterActivity" />
     </application>
 
 </manifest>

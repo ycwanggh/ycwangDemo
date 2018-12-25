@@ -69,4 +69,10 @@ public class MainActivity extends AppCompatActivity {
     void onClickData() {
         LaunchUtil.launchData(this);
     }
+
+
+    @OnClick(R.id.txw_mvp)
+    void onClickMVP() {
+        LaunchUtil.launchMVP(this);
+    }
 }
