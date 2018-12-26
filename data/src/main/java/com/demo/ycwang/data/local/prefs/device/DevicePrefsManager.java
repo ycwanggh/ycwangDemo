@@ -2,7 +2,7 @@ package com.demo.ycwang.data.local.prefs.device;
 
 import android.content.Context;
 
-import com.demo.ycwang.data.local.prefs.utils.SPUtils;
+import com.demo.ycwang.data.utils.SPUtils;
 
 /**
  * @Author: ycwang

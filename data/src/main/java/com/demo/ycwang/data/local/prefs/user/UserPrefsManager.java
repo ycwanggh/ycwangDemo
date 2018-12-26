@@ -2,8 +2,8 @@ package com.demo.ycwang.data.local.prefs.user;
 
 import android.content.Context;
 
-import com.demo.ycwang.data.local.prefs.utils.SPUtils;
-import com.demo.ycwang.data.Constance;
+import com.demo.ycwang.data.utils.SPUtils;
+import com.demo.ycwang.data.utils.Constance;
 
 /**
  * @Author: ycwang

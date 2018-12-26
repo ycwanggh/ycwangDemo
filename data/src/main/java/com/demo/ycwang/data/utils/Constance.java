@@ -1,4 +1,4 @@
-package com.demo.ycwang.data;
+package com.demo.ycwang.data.utils;
 
 /**
  * @Author: ycwang

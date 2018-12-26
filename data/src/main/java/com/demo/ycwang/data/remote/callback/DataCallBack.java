@@ -1,4 +1,4 @@
-package com.demo.ycwang.data.remote.http.callback;
+package com.demo.ycwang.data.remote.callback;
 
 /**
  * @Author: ycwang

@@ -2,9 +2,9 @@ package com.demo.ycwang.ycwangdemo.mvp;
 
 
 import com.demo.ycwang.core.mvp.BaseContract;
-import com.demo.ycwang.data.remote.http.callback.DataCallBack;
-import com.demo.ycwang.data.remote.http.response.Result;
-import com.demo.ycwang.data.remote.http.response.UserBean;
+import com.demo.ycwang.data.remote.callback.DataCallBack;
+import com.demo.ycwang.data.remote.response.Result;
+import com.demo.ycwang.data.remote.response.UserBean;
 import com.demo.ycwang.ycwangdemo.mvp.base.PresenterLife;
 
 /**

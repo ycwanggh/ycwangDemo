@@ -1,4 +1,4 @@
-package com.demo.ycwang.data.local.prefs.utils;
+package com.demo.ycwang.data.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;

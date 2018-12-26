@@ -1,7 +1,7 @@
-package com.demo.ycwang.data.remote.http.api;
+package com.demo.ycwang.data.remote.api;
 
-import com.demo.ycwang.data.remote.http.response.Result;
-import com.demo.ycwang.data.remote.http.response.UserBean;
+import com.demo.ycwang.data.remote.response.Result;
+import com.demo.ycwang.data.remote.response.UserBean;
 
 import retrofit2.Call;
 import retrofit2.http.Field;

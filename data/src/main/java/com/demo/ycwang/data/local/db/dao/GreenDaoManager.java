@@ -5,7 +5,7 @@ import android.content.Context;
 
 import com.demo.ycwang.data.local.db.greenDao.DaoMaster;
 import com.demo.ycwang.data.local.db.greenDao.DaoSession;
-import com.demo.ycwang.data.Constance;
+import com.demo.ycwang.data.utils.Constance;
 
 import org.greenrobot.greendao.AbstractDao;
 import org.greenrobot.greendao.database.Database;

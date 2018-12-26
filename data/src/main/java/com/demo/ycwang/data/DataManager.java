@@ -5,10 +5,10 @@ import android.content.Context;
 import com.demo.ycwang.data.local.LocalDataHelper;
 import com.demo.ycwang.data.local.LocalDataManager;
 import com.demo.ycwang.data.local.db.entity.User;
-import com.demo.ycwang.data.remote.http.RemoteDataHelper;
-import com.demo.ycwang.data.remote.http.RemoteDataManager;
-import com.demo.ycwang.data.remote.http.response.Result;
-import com.demo.ycwang.data.remote.http.response.UserBean;
+import com.demo.ycwang.data.remote.RemoteDataHelper;
+import com.demo.ycwang.data.remote.RemoteDataManager;
+import com.demo.ycwang.data.remote.response.Result;
+import com.demo.ycwang.data.remote.response.UserBean;
 
 import java.util.List;
 
@@ -24,7 +24,7 @@ public class DataManager implements LocalDataHelper, RemoteDataHelper {
 
     public DataManager(Context context) {
         this.localDataHelper = new LocalDataManager(context);
-        this.remoteDataHelper = RemoteDataManager.getInstance();
+        this.remoteDataHelper = new RemoteDataManager(context);
     }
 
     @Override

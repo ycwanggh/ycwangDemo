@@ -1,6 +1,6 @@
-package com.demo.ycwang.data.remote.http.callback;
+package com.demo.ycwang.data.remote.callback;
 
-import com.demo.ycwang.data.remote.http.response.Result;
+import com.demo.ycwang.data.remote.response.Result;
 
 import java.net.ConnectException;
 import java.net.SocketTimeoutException;
