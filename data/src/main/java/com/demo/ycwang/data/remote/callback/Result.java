@@ -1,4 +1,4 @@
-package com.demo.ycwang.data.remote.response;
+package com.demo.ycwang.data.remote.callback;
 
 import com.google.gson.annotations.SerializedName;
 

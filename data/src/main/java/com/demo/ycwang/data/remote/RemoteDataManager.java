@@ -2,15 +2,11 @@ package com.demo.ycwang.data.remote;
 
 import android.content.Context;
 
-import com.demo.ycwang.data.remote.api.API;
-import com.demo.ycwang.data.remote.http.utils.HttpUtils;
 import com.demo.ycwang.data.remote.module.member.MemberDataHelper;
 import com.demo.ycwang.data.remote.module.member.MemberDataManager;
-import com.demo.ycwang.data.remote.module.setting.SettingDataHelper;
-import com.demo.ycwang.data.remote.response.Result;
-import com.demo.ycwang.data.remote.response.UserBean;
+import com.demo.ycwang.data.remote.callback.Result;
+import com.demo.ycwang.data.remote.module.member.response.UserBean;
 
-import retrofit2.Call;
 import retrofit2.Callback;
 
 /**

@@ -1,8 +1,4 @@
-package com.demo.ycwang.data.remote.head;
-
-import android.content.Context;
-
-import com.demo.ycwang.data.remote.ModuleLocalData;
+package com.demo.ycwang.data.remote.http.utils;
 
 import java.io.IOException;
 

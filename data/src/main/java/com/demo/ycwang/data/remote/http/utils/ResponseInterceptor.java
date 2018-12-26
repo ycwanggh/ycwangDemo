@@ -1,4 +1,4 @@
-package com.demo.ycwang.data.remote.response;
+package com.demo.ycwang.data.remote.http.utils;
 
 import com.demo.ycwang.data.remote.RemoteDataManager;
 

@@ -1,7 +1,7 @@
 package com.demo.ycwang.data.remote.module.member;
 
-import com.demo.ycwang.data.remote.response.Result;
-import com.demo.ycwang.data.remote.response.UserBean;
+import com.demo.ycwang.data.remote.callback.Result;
+import com.demo.ycwang.data.remote.module.member.response.UserBean;
 
 import retrofit2.Callback;
 

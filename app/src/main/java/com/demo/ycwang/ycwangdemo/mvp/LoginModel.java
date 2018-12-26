@@ -2,8 +2,8 @@ package com.demo.ycwang.ycwangdemo.mvp;
 
 import com.demo.ycwang.data.remote.callback.CallBackHandler;
 import com.demo.ycwang.data.remote.callback.DataCallBack;
-import com.demo.ycwang.data.remote.response.Result;
-import com.demo.ycwang.data.remote.response.UserBean;
+import com.demo.ycwang.data.remote.callback.Result;
+import com.demo.ycwang.data.remote.module.member.response.UserBean;
 import com.demo.ycwang.ycwangdemo.app.App;
 import com.demo.ycwang.ycwangdemo.mvp.base.PresenterLife;
 

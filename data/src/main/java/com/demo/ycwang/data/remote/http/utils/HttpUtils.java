@@ -2,8 +2,6 @@ package com.demo.ycwang.data.remote.http.utils;
 
 import com.demo.ycwang.data.BuildConfig;
 import com.demo.ycwang.data.remote.api.API;
-import com.demo.ycwang.data.remote.head.HeaderInterceptor;
-import com.demo.ycwang.data.remote.response.ResponseInterceptor;
 
 import java.util.concurrent.TimeUnit;
 

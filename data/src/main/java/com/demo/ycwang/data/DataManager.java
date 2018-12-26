@@ -7,8 +7,8 @@ import com.demo.ycwang.data.local.LocalDataManager;
 import com.demo.ycwang.data.local.db.entity.User;
 import com.demo.ycwang.data.remote.RemoteDataHelper;
 import com.demo.ycwang.data.remote.RemoteDataManager;
-import com.demo.ycwang.data.remote.response.Result;
-import com.demo.ycwang.data.remote.response.UserBean;
+import com.demo.ycwang.data.remote.callback.Result;
+import com.demo.ycwang.data.remote.module.member.response.UserBean;
 
 import java.util.List;
 
@@ -66,7 +66,6 @@ public class DataManager implements LocalDataHelper, RemoteDataHelper {
     public void setRequestCookie(String cookie) {
         localDataHelper.setRequestCookie(cookie);
     }
-
 
     @Override
     public List<User> queryAll() {

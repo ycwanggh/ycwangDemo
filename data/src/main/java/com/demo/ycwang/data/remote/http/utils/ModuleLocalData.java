@@ -1,4 +1,4 @@
-package com.demo.ycwang.data.remote;
+package com.demo.ycwang.data.remote.http.utils;
 
 import android.content.Context;
 

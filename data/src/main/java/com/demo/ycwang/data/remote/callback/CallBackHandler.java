@@ -1,7 +1,5 @@
 package com.demo.ycwang.data.remote.callback;
 
-import com.demo.ycwang.data.remote.response.Result;
-
 import java.net.ConnectException;
 import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;
