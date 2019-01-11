@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
+
     @OnClick(R.id.txw_edit)
     void onClickEdit() {
         LaunchUtil.launchSpaceEditText(this);
