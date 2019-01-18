@@ -9,6 +9,7 @@ import com.demo.ycwang.ycwangdemo.edittext.SpaceEditTextActivity;
 import com.demo.ycwang.ycwangdemo.imgcrop.ImageCropActivity;
 import com.demo.ycwang.ycwangdemo.keyboard.KeyBoardActivity;
 import com.demo.ycwang.ycwangdemo.mvp.PresenterActivity;
+import com.demo.ycwang.ycwangdemo.niotifcation.NotificationActivity;
 import com.demo.ycwang.ycwangdemo.recyclerview.RecyclerViewActivity;
 import com.demo.ycwang.ycwangdemo.slidetab.SlideTabActivity;
 import com.demo.ycwang.ycwangdemo.slidingtray.SlidingTrayActivity;
@@ -83,6 +84,11 @@ public class LaunchUtil {
 
     public static void launchMVP(Context context) {
         Intent intent = new Intent(context, PresenterActivity.class);
+        context.startActivity(intent);
+    }
+
+    public static void launchNotification(Context context) {
+        Intent intent = new Intent(context, NotificationActivity.class);
         context.startActivity(intent);
     }
 

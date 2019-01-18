@@ -76,4 +76,9 @@ public class MainActivity extends AppCompatActivity {
     void onClickMVP() {
         LaunchUtil.launchMVP(this);
     }
+
+    @OnClick(R.id.txw_notification)
+    void onClickNotification() {
+        LaunchUtil.launchNotification(this);
+    }
 }

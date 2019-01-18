@@ -59,12 +59,12 @@ public class RecyclerViewActivity extends Activity {
                 Toast.makeText(getApplicationContext(), "点击：---》" + i + "条", Toast.LENGTH_SHORT).show();
             }
 
-            @Override
-            public void onItemLongClick(RecyclerView.ViewHolder viewHolder) {
-                if (viewHolder.getLayoutPosition() != 0) {
-                    itemTouchHelper.startDrag(viewHolder);
-                }
-            }
+//            @Override
+//            public void onItemLongClick(RecyclerView.ViewHolder viewHolder) {
+//                if (viewHolder.getLayoutPosition() != 0) {
+//                    itemTouchHelper.startDrag(viewHolder);
+//                }
+//            }
         });
 
         recyclerView.setAdapter(adapter);
