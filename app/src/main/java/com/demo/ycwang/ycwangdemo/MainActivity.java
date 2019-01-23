@@ -81,4 +81,9 @@ public class MainActivity extends AppCompatActivity {
     void onClickNotification() {
         LaunchUtil.launchNotification(this);
     }
+
+    @OnClick(R.id.txw_storage)
+    void onClickStorageUtils() {
+        LaunchUtil.launchStorageUtils(this);
+    }
 }

@@ -37,6 +37,7 @@
         <activity android:name=".data.DataActivity" />
         <activity android:name=".mvp.PresenterActivity" />
         <activity android:name=".niotifcation.NotificationActivity" />
+        <activity android:name=".storageutils.StorageActivity" />
     </application>
 
 </manifest>

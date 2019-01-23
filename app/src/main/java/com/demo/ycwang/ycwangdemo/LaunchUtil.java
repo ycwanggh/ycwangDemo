@@ -13,6 +13,7 @@ import com.demo.ycwang.ycwangdemo.niotifcation.NotificationActivity;
 import com.demo.ycwang.ycwangdemo.recyclerview.RecyclerViewActivity;
 import com.demo.ycwang.ycwangdemo.slidetab.SlideTabActivity;
 import com.demo.ycwang.ycwangdemo.slidingtray.SlidingTrayActivity;
+import com.demo.ycwang.ycwangdemo.storageutils.StorageActivity;
 import com.demo.ycwang.ycwangdemo.tab.TabActivity;
 import com.demo.ycwang.ycwangdemo.textutils.TextUtilsCopyActivity;
 import com.demo.ycwang.ycwangdemo.viewdraghelper.ViewDragHelperActivity;
@@ -89,6 +90,11 @@ public class LaunchUtil {
 
     public static void launchNotification(Context context) {
         Intent intent = new Intent(context, NotificationActivity.class);
+        context.startActivity(intent);
+    }
+
+    public static void launchStorageUtils(Context context) {
+        Intent intent = new Intent(context, StorageActivity.class);
         context.startActivity(intent);
     }
 
