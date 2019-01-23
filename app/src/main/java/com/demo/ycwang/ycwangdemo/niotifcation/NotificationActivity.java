@@ -1,5 +1,6 @@
 package com.demo.ycwang.ycwangdemo.niotifcation;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -11,6 +12,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
+import android.support.v4.app.ActivityCompat;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RemoteViews;
@@ -52,7 +54,7 @@ public class NotificationActivity extends Activity {
             }
         });
 
-        btn_=findViewById(R.id.btn_);
+        btn_ = findViewById(R.id.btn_);
         btn_.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
             @Override
@@ -60,6 +62,11 @@ public class NotificationActivity extends Activity {
                 showSuspensionNotification();
             }
         });
+
+
+        ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CALL_PHONE);
+
+
     }
 
 
@@ -112,16 +119,16 @@ public class NotificationActivity extends Activity {
         builder.setContentTitle("悬挂式");
         builder.setContentIntent(pendingIntent);
         builder.setAutoCancel(true);
-        builder.setLargeIcon(BitmapFactory.decodeResource(getResources(),R.drawable.lock_slide));
+        builder.setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.lock_slide));
         builder.setSmallIcon(R.drawable.ic_lock_redbag);
 
 
-        Intent intent1=new Intent();
+        Intent intent1 = new Intent();
         intent1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent1.setClass(this,NotificationActivity.class);
-        PendingIntent pendingIntent1=PendingIntent.getActivity(this,0,intent1,PendingIntent.FLAG_CANCEL_CURRENT);
+        intent1.setClass(this, NotificationActivity.class);
+        PendingIntent pendingIntent1 = PendingIntent.getActivity(this, 0, intent1, PendingIntent.FLAG_CANCEL_CURRENT);
 
-        builder.setFullScreenIntent(pendingIntent1,true);
+        builder.setFullScreenIntent(pendingIntent1, true);
 
         Notification notification = builder.build();
         NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
