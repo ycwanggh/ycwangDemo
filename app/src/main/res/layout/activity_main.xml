@@ -171,6 +171,40 @@
             android:textColor="#FFFFFF"
             android:textSize="16dp" />
 
+        <TextView
+            android:id="@+id/txw_list_dialog_from_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="ListDialogFromBottom"
+            android:textColor="#FFFFFF"
+            android:textSize="16dp" />
+
+
+        <TextView
+            android:id="@+id/txw_list_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="ListFragment"
+            android:textColor="#FFFFFF"
+            android:textSize="16dp" />
+
+
+        <TextView
+            android:id="@+id/txw_notification_auto"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="NotificationAuto"
+            android:textColor="#FFFFFF"
+            android:textSize="16dp" />
 
 
     </LinearLayout>

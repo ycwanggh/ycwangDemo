@@ -59,6 +59,12 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </service>
+
+        <activity
+            android:name=".auto_create.ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".auto_create.ui_compoment_fragment.ItemActivity" />
     </application>
 
 </manifest>
