@@ -6,6 +6,11 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.VIBRATE" />
 
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:name=".app.App"
         android:allowBackup="true"
@@ -63,8 +68,18 @@
         <activity
             android:name=".auto_create.ScrollingActivity"
             android:label="@string/title_activity_scrolling"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".auto_create.ui_compoment_fragment.ItemActivity" />
+        <activity
+            android:name="com.module.home.SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity
+            android:name="com.module.home.MyScrollingActivity"
+            android:label="@string/title_activity_my_scrolling"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.module.home.LoginActivity"
+            android:label="@string/title_activity_login"></activity>
     </application>
 
 </manifest>

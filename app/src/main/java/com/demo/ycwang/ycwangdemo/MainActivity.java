@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity implements ItemListDialogFra
     void onClickListDialogFromBottom() {
         ItemListDialogFragment.newInstance(5).show(getSupportFragmentManager(), "dialog");
         /**
-         * {@link #onItemClicked(int)}
+         * //{@link #onItemClicked(int)}
          */
     }
 
