@@ -104,6 +104,11 @@ public class MainActivity extends AppCompatActivity implements ItemListDialogFra
         LaunchUtil.launchItemListFragment(this);
     }
 
+    @OnClick(R.id.txw_layout_test)
+    void onClickLayoutTest() {
+        LaunchUtil.launchSerVice(this);
+    }
+
     @OnClick(R.id.txw_notification_auto)
     void onClickNotificationAuto() {
         NewMessageNotification.notify(this, "XXXXXXXXXX", 5);

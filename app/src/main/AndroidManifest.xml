@@ -64,6 +64,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </service>
+        <service android:name=".service.MyService" />
 
         <activity
             android:name=".auto_create.ScrollingActivity"
@@ -80,6 +81,9 @@
         <activity
             android:name="com.module.home.LoginActivity"
             android:label="@string/title_activity_login"></activity>
+        <activity android:name=".handler.HandlerActivity" />
+        <activity android:name=".layout.LayoutTestActivity" />
+        <activity android:name=".service.TestServiceClass" />
     </application>
 
 </manifest>

@@ -9,9 +9,11 @@ import com.demo.ycwang.ycwangdemo.data.DataActivity;
 import com.demo.ycwang.ycwangdemo.edittext.SpaceEditTextActivity;
 import com.demo.ycwang.ycwangdemo.imgcrop.ImageCropActivity;
 import com.demo.ycwang.ycwangdemo.keyboard.KeyBoardActivity;
+import com.demo.ycwang.ycwangdemo.layout.LayoutTestActivity;
 import com.demo.ycwang.ycwangdemo.mvp.PresenterActivity;
 import com.demo.ycwang.ycwangdemo.niotifcation.NotificationActivity;
 import com.demo.ycwang.ycwangdemo.recyclerview.RecyclerViewActivity;
+import com.demo.ycwang.ycwangdemo.service.TestServiceClass;
 import com.demo.ycwang.ycwangdemo.slidetab.SlideTabActivity;
 import com.demo.ycwang.ycwangdemo.slidingtray.SlidingTrayActivity;
 import com.demo.ycwang.ycwangdemo.storageutils.StorageActivity;
@@ -104,6 +106,13 @@ public class LaunchUtil {
         context.startActivity(intent);
     }
 
-
+    public static void launchLayoutTest(Context context) {
+        Intent intent = new Intent(context, LayoutTestActivity.class);
+        context.startActivity(intent);
+    }
+    public static void launchSerVice(Context context) {
+        Intent intent = new Intent(context, TestServiceClass.class);
+        context.startActivity(intent);
+    }
 
 }
