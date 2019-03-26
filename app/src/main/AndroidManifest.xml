@@ -68,6 +68,9 @@
         <service
             android:name="com.ycwang.main.messenger.MessengerService"
             android:process=":remote" />
+        <service
+            android:name="com.ycwang.aidlt.BookManagerService"
+            android:process=":remote" />
 
         <activity
             android:name=".auto_create.ScrollingActivity"
@@ -78,6 +81,7 @@
         <activity android:name=".layout.LayoutTestActivity" />
         <activity android:name=".service.TestServiceClass" />
         <activity android:name="com.ycwang.main.messenger.MessengerActivity" />
+        <activity android:name="com.ycwang.aidlt.BookManagerActivity" />
     </application>
 
 </manifest>

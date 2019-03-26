@@ -13,14 +13,13 @@ import com.demo.ycwang.ycwangdemo.layout.LayoutTestActivity;
 import com.demo.ycwang.ycwangdemo.mvp.PresenterActivity;
 import com.demo.ycwang.ycwangdemo.niotifcation.NotificationActivity;
 import com.demo.ycwang.ycwangdemo.recyclerview.RecyclerViewActivity;
-import com.demo.ycwang.ycwangdemo.service.TestServiceClass;
 import com.demo.ycwang.ycwangdemo.slidetab.SlideTabActivity;
 import com.demo.ycwang.ycwangdemo.slidingtray.SlidingTrayActivity;
 import com.demo.ycwang.ycwangdemo.storageutils.StorageActivity;
 import com.demo.ycwang.ycwangdemo.tab.TabActivity;
 import com.demo.ycwang.ycwangdemo.textutils.TextUtilsCopyActivity;
 import com.demo.ycwang.ycwangdemo.viewdraghelper.ViewDragHelperActivity;
-import com.ycwang.main.messenger.MessengerActivity;
+import com.ycwang.aidlt.BookManagerActivity;
 
 // Intent.FLAG_ACTIVITY_NEW_TASK 启动的Activity都将在每个新的Task中 ，一般从Service中启动Activity用此标志
 // Intent.FLAG_ACTIVITY_SINGLE_TOP 与指定 android:launchMode="singleTop" 一样
@@ -112,7 +111,7 @@ public class LaunchUtil {
         context.startActivity(intent);
     }
     public static void launchSerVice(Context context) {
-        Intent intent = new Intent(context, MessengerActivity.class);
+        Intent intent = new Intent(context, BookManagerActivity.class);
         context.startActivity(intent);
     }
 
