@@ -19,7 +19,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.ycwang.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -65,25 +65,19 @@
             </intent-filter>
         </service>
         <service android:name=".service.MyService" />
+        <service
+            android:name="com.ycwang.main.messenger.MessengerService"
+            android:process=":remote" />
 
         <activity
             android:name=".auto_create.ScrollingActivity"
             android:label="@string/title_activity_scrolling"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".auto_create.ui_compoment_fragment.ItemActivity" />
-        <activity
-            android:name="com.module.home.SettingsActivity"
-            android:label="@string/title_activity_settings" />
-        <activity
-            android:name="com.module.home.MyScrollingActivity"
-            android:label="@string/title_activity_my_scrolling"
-            android:theme="@style/AppTheme" />
-        <activity
-            android:name="com.module.home.LoginActivity"
-            android:label="@string/title_activity_login"></activity>
         <activity android:name=".handler.HandlerActivity" />
         <activity android:name=".layout.LayoutTestActivity" />
         <activity android:name=".service.TestServiceClass" />
+        <activity android:name="com.ycwang.main.messenger.MessengerActivity" />
     </application>
 
 </manifest>

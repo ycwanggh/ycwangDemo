@@ -3,6 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
+
         applicationId "com.demo.ycwang.ycwangdemo"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
@@ -11,6 +12,8 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
     }
+
+    //封装此项目的所有构建类型配置。
     buildTypes {
         release {
             minifyEnabled false
@@ -24,8 +27,12 @@ android {
 
     sourceSets {
         main {
-            java.srcDirs = ['src/main/java', 'src/main/module/home/java']
-            resources.srcDirs = ['src/main/resources', 'src/main/module/home/res', 'folder/resource']
+            //Changes the directory for Java sources. The default directory is 'src/main/java'.
+            java.srcDirs = ['src/main/java', 'src/main/module/home/java', 'other/java']
+
+            //Changes the directory for res resources. The default directory is 'src/main/res'.
+            res.srcDirs = ['src/main/res', 'src/main/module/home/res', 'other/res']
+
             aidl.srcDirs = ['src/main/aidl', 'folder/aidl']
             assets.srcDirs = ['src/main/assets', 'folder/assert']
             jni.srcDirs = ['src/main/jni', 'folder/jni']

@@ -1,9 +1,11 @@
-package com.demo.ycwang.ycwangdemo;
+package com.ycwang.main;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.demo.ycwang.ycwangdemo.LaunchUtil;
+import com.demo.ycwang.ycwangdemo.R;
 import com.demo.ycwang.ycwangdemo.auto_create.ItemListDialogFragment;
 import com.demo.ycwang.ycwangdemo.auto_create.ui_componment_notification.NewMessageNotification;
 
