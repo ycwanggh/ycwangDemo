@@ -218,6 +218,12 @@
             android:textSize="16dp" />
 
 
+
+        <com.ycwang.other3.DrawTextTestView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
     </LinearLayout>
 
 
