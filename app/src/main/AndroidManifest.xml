@@ -6,46 +6,73 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.VIBRATE" />
 
-    <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
-        android:name=".app.App"
+        android:name="com.demo.ycwang.base.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.ycwang.main.MainActivity">
+
+
+        <activity android:name="com.demo.ycwang.base.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".viewdraghelper.ViewDragHelperActivity" />
-        <activity android:name=".recyclerview.RecyclerViewActivity" />
         <activity
-            android:name=".tab.TabActivity"
+            android:name="com.demo.ycwang.custom.tab.TabActivity"
             android:theme="@style/Theme.Design.NoActionBar" />
-        <activity android:name=".edittext.SpaceEditTextActivity" />
-        <activity android:name=".slidingtray.SlidingTrayActivity" />
         <activity
-            android:name=".slidetab.SlideTabActivity"
+            android:name="com.demo.ycwang.custom.slidetab.SlideTabActivity"
             android:theme="@style/Theme.Design.NoActionBar" />
-        <activity android:name=".imgcrop.ImageCropActivity" />
-        <activity android:name=".keyboard.KeyBoardActivity" />
-        <activity android:name=".animation.AnimationActivity" />
-        <activity android:name=".textutils.TextUtilsCopyActivity" />
-        <activity android:name=".data.DataActivity" />
-        <activity android:name=".mvp.PresenterActivity" />
-        <activity android:name=".niotifcation.NotificationActivity" />
-        <activity android:name=".storageutils.StorageActivity" />
+        <activity
+            android:name="com.demo.ycwang.auto_create.ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.demo.ycwang.mul.MulActivity" />
+        <activity android:name="com.demo.ycwang.data.DataActivity" />
+        <activity android:name="com.demo.ycwang.util.StorageActivity" />
+        <activity android:name="com.demo.ycwang.mvp.PresenterActivity" />
+        <activity android:name="com.demo.ycwang.thread.HandlerActivity" />
+        <activity android:name="com.demo.ycwang.service.TestServiceClass" />
+        <activity android:name="com.demo.ycwang.aidlt.BookManagerActivity" />
+        <activity android:name="com.demo.ycwang.custom.layout.LayoutTestActivity" />
+        <activity android:name="com.demo.ycwang.custom.keyboard.KeyBoardActivity" />
+        <activity android:name="com.demo.ycwang.aidlt.messenger.MessengerActivity" />
+        <activity android:name="com.demo.ycwang.custom.animation.AnimationActivity" />
+        <activity android:name="com.demo.ycwang.util.textutils.TextUtilsCopyActivity" />
+        <activity android:name="com.demo.ycwang.custom.view.imgcrop.ImageCropActivity" />
+        <activity android:name="com.demo.ycwang.custom.edittext.SpaceEditTextActivity" />
+        <activity android:name="com.demo.ycwang.custom.slidingtray.SlidingTrayActivity" />
+        <activity android:name="com.demo.ycwang.custom.recylerview.RecyclerViewActivity" />
+        <activity android:name="com.demo.ycwang.custom.niotifcation.NotificationActivity" />
+        <activity android:name="com.demo.ycwang.custom.viewdraghelper.ViewDragHelperActivity" />
+        <activity android:name="com.demo.ycwang.auto_create.ui_compoment_fragment.ItemActivity" />
 
-        <receiver android:name=".auto_create.NewAppWidget">
+        <service android:name="com.demo.ycwang.service.MyService" />
+        <service
+            android:name="com.demo.ycwang.aidlt.messenger.MessengerService"
+            android:process=":remote" />
+        <service
+            android:name="com.demo.ycwang.auto_create.MyDaydreamService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.service.dreams.DreamService" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+
+        <receiver android:name="com.demo.ycwang.auto_create.NewAppWidget">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -54,34 +81,7 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/new_app_widget_info" />
         </receiver>
-        <!-- This service is only used on devices with API v17+ -->
-        <service
-            android:name=".auto_create.MyDaydreamService"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.service.dreams.DreamService" />
 
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </service>
-        <service android:name=".service.MyService" />
-        <service
-            android:name="com.ycwang.main.messenger.MessengerService"
-            android:process=":remote" />
-        <service
-            android:name="com.ycwang.aidlt.BookManagerService"
-            android:process=":remote" />
-
-        <activity
-            android:name=".auto_create.ScrollingActivity"
-            android:label="@string/title_activity_scrolling"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".auto_create.ui_compoment_fragment.ItemActivity" />
-        <activity android:name=".handler.HandlerActivity" />
-        <activity android:name=".layout.LayoutTestActivity" />
-        <activity android:name=".service.TestServiceClass" />
-        <activity android:name="com.ycwang.main.messenger.MessengerActivity" />
-        <activity android:name="com.ycwang.aidlt.BookManagerActivity" />
     </application>
 
 </manifest>
