@@ -10,8 +10,8 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.demo.ycwang.util.Utils;
 import com.demo.ycwang.ycwangdemo.R;
-import com.demo.ycwang.ycwangdemo.utils.Utils;
 
 /**
  * @Author: ycwang

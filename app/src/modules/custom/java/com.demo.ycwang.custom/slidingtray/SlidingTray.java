@@ -30,7 +30,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.accessibility.AccessibilityEvent;
 
-import com.demo.ycwang.ycwangdemo.utils.Utils;
+import com.demo.ycwang.util.Utils;
 
 
 /**

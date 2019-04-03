@@ -20,7 +20,7 @@ import android.widget.ImageView;
 import com.demo.ycwang.custom.view.imgcrop.edge.Edge;
 import com.demo.ycwang.custom.view.imgcrop.handle.CropWindowEdgeSelector;
 import com.demo.ycwang.custom.view.imgcrop.util.CatchEdgeUtil;
-import com.demo.ycwang.ycwangdemo.utils.Utils;
+import com.demo.ycwang.util.Utils;
 
 
 public class CropImageView extends ImageView {
