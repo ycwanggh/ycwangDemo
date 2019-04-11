@@ -1,3 +1,65 @@
+// 7. 集成签名配置
+// 在构建release版本的Android项目时，每次都手动导入签名文件，键入密码、keyalias等信息十分麻烦。
+// 通过将签名配置集成到构建脚本中，我们就不必每次构建发行版本时都手动设置了。具体配置如下：
+//
+//
+//
+// signingConfigs {
+//    myConfig { //将"xx"替换为自己的签名文件信息
+//        storeFile file("xx.jks")
+//        storePassword "xx"
+//        keyAlias "xx"
+//        keyPassword "xx"
+//    }
+// }
+// android {
+//    buildTypes {
+//        release {
+//            signingConfig  signingConfigs.myConfig //在release块中加入这行
+//            ...
+//        }
+//    }
+//    ...
+// }
+//
+//
+// 真实开发中，我们不应该把密码等信息直接写到build.gradle中，更好的做法是放在gradle.properties中设置：
+//
+// RELEASE_STOREFILE=xxx.jks
+// RELEASE_STORE_PASSWORD = xxx
+// RELEASE_KEY_ALIAS=xxx
+// RELEASE_KEY_PASSWORD=xxx
+//
+// 然后在build.gradle中直接引用即可：
+//
+// signingConfigs {
+//    myConfig {
+//        storeFilefile(RELEASE_STOREFILE)
+//        storePassword RELEASE_STORE_PASSWORD
+//        keyAlias RELEASE_KEY_ALIAS
+//        keyPassword RELEASE_KEY_PASSWORD
+//    }
+// }
+
+// 6.自动移除不再使用的资源
+//
+// 只需进行如下配置：
+//
+//
+//
+// android {
+//    ...
+// }
+// buildTypes {
+//    release {
+//        ...
+//        自动移除不再使用的资源
+//        shrinkResources true
+//        ...
+//    }
+// }
+
+
 apply plugin: 'com.android.application'
 
 android {

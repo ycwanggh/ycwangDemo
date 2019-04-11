@@ -4,23 +4,17 @@ import android.content.Context;
 import android.content.Intent;
 
 import com.demo.ycwang.aidlt.BookManagerActivity;
-
 import com.demo.ycwang.auto_create.ui_compoment_fragment.ItemActivity;
 import com.demo.ycwang.custom.animation.AnimationActivity;
-
-
 import com.demo.ycwang.custom.edittext.SpaceEditTextActivity;
 import com.demo.ycwang.custom.view.imgcrop.ImageCropActivity;
 import com.demo.ycwang.custom.keyboard.KeyBoardActivity;
 import com.demo.ycwang.custom.layout.LayoutTestActivity;
-
 import com.demo.ycwang.custom.niotifcation.NotificationActivity;
 import com.demo.ycwang.custom.recylerview.RecyclerViewActivity;
 import com.demo.ycwang.custom.slidetab.SlideTabActivity;
 import com.demo.ycwang.custom.slidingtray.SlidingTrayActivity;
-
 import com.demo.ycwang.custom.tab.TabActivity;
-
 import com.demo.ycwang.custom.viewdraghelper.ViewDragHelperActivity;
 import com.demo.ycwang.data.DataActivity;
 import com.demo.ycwang.mvp.PresenterActivity;
@@ -117,6 +111,7 @@ public class LaunchUtil {
         Intent intent = new Intent(context, LayoutTestActivity.class);
         context.startActivity(intent);
     }
+
     public static void launchSerVice(Context context) {
         Intent intent = new Intent(context, BookManagerActivity.class);
         context.startActivity(intent);

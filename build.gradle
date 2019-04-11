@@ -20,6 +20,17 @@ allprojects {
         google()
         jcenter()
     }
+
+    //统一项目的编码
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+    }
+
+    //设置全局编译器的版本
+    tasks.withType(JavaCompile) {
+        sourceCompatibility = JavaVersion.VERSION_1_7
+        targetCompatibility = JavaVersion.VERSION_1_7
+    }
 }
 
 task clean(type: Delete) {
