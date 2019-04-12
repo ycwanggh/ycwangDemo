@@ -20,7 +20,7 @@ import android.widget.ImageView;
 import com.demo.ycwang.custom.view.imgcrop.edge.Edge;
 import com.demo.ycwang.custom.view.imgcrop.handle.CropWindowEdgeSelector;
 import com.demo.ycwang.custom.view.imgcrop.util.CatchEdgeUtil;
-import com.demo.ycwang.util.Utils;
+import com.demo.ycwang.core.utils.SizeUtils;
 
 
 public class CropImageView extends ImageView {
@@ -74,25 +74,25 @@ public class CropImageView extends ImageView {
 
         mBorderPaint = new Paint();
         mBorderPaint.setStyle(Paint.Style.STROKE);
-        mBorderPaint.setStrokeWidth(Utils.dpToPx(context, 3));
+        mBorderPaint.setStrokeWidth(SizeUtils.dpToPx(3));
         mBorderPaint.setColor(Color.parseColor("#AAFFFFFF"));
 
         mGuidelinePaint = new Paint();
         mGuidelinePaint.setStyle(Paint.Style.STROKE);
-        mGuidelinePaint.setStrokeWidth(Utils.dpToPx(context, 1));
+        mGuidelinePaint.setStrokeWidth(SizeUtils.dpToPx(1));
         mGuidelinePaint.setColor(Color.parseColor("#AAFFFFFF"));
 
 
         mCornerPaint = new Paint();
         mCornerPaint.setStyle(Paint.Style.STROKE);
-        mCornerPaint.setStrokeWidth(Utils.dpToPx(context, 5));
+        mCornerPaint.setStrokeWidth(SizeUtils.dpToPx(5));
         mCornerPaint.setColor(Color.WHITE);
 
 
-        mScaleRadius = Utils.dpToPx(context, 24);
-        mBorderThickness = Utils.dpToPx(context, 3);
-        mCornerThickness = Utils.dpToPx(context, 5);
-        mCornerLength = Utils.dpToPx(context, 20);
+        mScaleRadius = SizeUtils.dpToPx(24);
+        mBorderThickness = SizeUtils.dpToPx(3);
+        mCornerThickness = SizeUtils.dpToPx(5);
+        mCornerLength = SizeUtils.dpToPx(20);
     }
 
     @Override

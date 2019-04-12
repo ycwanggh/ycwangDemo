@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.demo.ycwang.core.utils.KeyboardUtilsCp;
 import com.demo.ycwang.ycwangdemo.R;
 
 /**
@@ -25,7 +26,7 @@ public class KeyBoardActivity extends Activity {
         open.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                KeyboardUtils.showSoftInput(KeyBoardActivity.this, v);
+                KeyboardUtilsCp.showSoftInput(KeyBoardActivity.this, v);
             }
         });
 
@@ -33,11 +34,11 @@ public class KeyBoardActivity extends Activity {
         close.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                KeyboardUtils.hideSoftInput(KeyBoardActivity.this, v);
+                KeyboardUtilsCp.hideSoftInput(KeyBoardActivity.this, v);
             }
         });
 
-        KeyboardUtils.registerSoftInputChangedListener(this, new KeyboardUtils.OnSoftInputChangedListener() {
+        KeyboardUtilsCp.registerSoftInputChangedListener(this, new KeyboardUtilsCp.OnSoftInputChangedListener() {
             @Override
             public void onSoftInputChanged(int height) {
                 Toast.makeText(getApplicationContext(), "height:" + height, Toast.LENGTH_SHORT).show();
@@ -49,6 +50,6 @@ public class KeyBoardActivity extends Activity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        KeyboardUtils.unregisterSoftInputChangedListener(this);
+        KeyboardUtilsCp.unregisterSoftInputChangedListener(this);
     }
 }

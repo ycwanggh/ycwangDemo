@@ -30,7 +30,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.accessibility.AccessibilityEvent;
 
-import com.demo.ycwang.util.Utils;
+import com.demo.ycwang.core.utils.SizeUtils;
 
 
 /**
@@ -147,12 +147,12 @@ public class SlidingTray extends ViewGroup {
 
         setOrientation(orientation);
 
-        mTapThreshold = (int) Utils.dpToPx(getContext(), TAP_THRESHOLD);
-        mMaximumTapVelocity = (int) Utils.dpToPx(getContext(), MAXIMUM_TAP_VELOCITY);
-        mMaximumMinorVelocity = (int) Utils.dpToPx(getContext(), MAXIMUM_MINOR_VELOCITY);
-        mMaximumMajorVelocity = (int) Utils.dpToPx(getContext(), MAXIMUM_MAJOR_VELOCITY);
-        mMaximumAcceleration = (int) Utils.dpToPx(getContext(), MAXIMUM_ACCELERATION);
-        mVelocityUnits = (int) Utils.dpToPx(getContext(), VELOCITY_UNITS);
+        mTapThreshold = (int) SizeUtils.dpToPx(TAP_THRESHOLD);
+        mMaximumTapVelocity = (int) SizeUtils.dpToPx(MAXIMUM_TAP_VELOCITY);
+        mMaximumMinorVelocity = (int) SizeUtils.dpToPx(MAXIMUM_MINOR_VELOCITY);
+        mMaximumMajorVelocity = (int) SizeUtils.dpToPx(MAXIMUM_MAJOR_VELOCITY);
+        mMaximumAcceleration = (int) SizeUtils.dpToPx(MAXIMUM_ACCELERATION);
+        mVelocityUnits = (int) SizeUtils.dpToPx(VELOCITY_UNITS);
     }
 
     /**

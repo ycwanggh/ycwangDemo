@@ -51,5 +51,6 @@ ext {
     greenDaoVersion = '3.2.2'
     retrofit = '2.0.2'
     okhttp3 = '3.6.0'
+    gson='2.8.5'
 
 }

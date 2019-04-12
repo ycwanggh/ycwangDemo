@@ -37,4 +37,5 @@ dependencies {
     compileOnly "com.squareup.okhttp3:logging-interceptor:$okhttp3"
     compileOnly "com.squareup.retrofit2:retrofit:$retrofit"
     compileOnly "com.squareup.retrofit2:converter-gson:$retrofit"
+    implementation project(':core')
 }

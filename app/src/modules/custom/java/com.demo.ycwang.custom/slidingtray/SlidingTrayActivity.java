@@ -10,7 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.demo.ycwang.util.Utils;
+import com.demo.ycwang.core.utils.SizeUtils;
 import com.demo.ycwang.ycwangdemo.R;
 
 /**
@@ -33,7 +33,7 @@ public class SlidingTrayActivity extends Activity {
         slidingTray.setHandlePosition(Side.TOP);
         rootView.addView(slidingTray,
                 new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,
-                        Utils.getViewHeight(contentView) + Utils.getViewHeight(handlerView)));
+                        SizeUtils.getMeasuredHeight(contentView) + SizeUtils.getMeasuredHeight(handlerView)));
 
         slidingTray.setOnDrawerCloseListener(new SlidingTray.OnDrawerCloseListener() {
             @Override

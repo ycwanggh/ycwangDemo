@@ -23,7 +23,8 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "com.android.support:appcompat-v7:$rootProject.ext.designVersion"
     compileOnly "com.jakewharton:butterknife:$rootProject.ext.butterknifeVersion"
+    implementation "com.google.code.gson:gson:$rootProject.ext.gson"
 }
