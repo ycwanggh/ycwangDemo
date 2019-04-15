@@ -19,7 +19,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-
         <activity android:name="com.demo.ycwang.base.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,10 +32,6 @@
         <activity
             android:name="com.demo.ycwang.custom.slidetab.SlideTabActivity"
             android:theme="@style/Theme.Design.NoActionBar" />
-        <activity
-            android:name="com.demo.ycwang.auto_create.ScrollingActivity"
-            android:label="@string/title_activity_scrolling"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="com.demo.ycwang.mul.MulActivity" />
         <activity android:name="com.demo.ycwang.data.DataActivity" />
         <activity android:name="com.demo.ycwang.util.StorageActivity" />
@@ -55,33 +50,11 @@
         <activity android:name="com.demo.ycwang.custom.recylerview.RecyclerViewActivity" />
         <activity android:name="com.demo.ycwang.custom.niotifcation.NotificationActivity" />
         <activity android:name="com.demo.ycwang.custom.viewdraghelper.ViewDragHelperActivity" />
-        <activity android:name="com.demo.ycwang.auto_create.ui_compoment_fragment.ItemActivity" />
 
         <service android:name="com.demo.ycwang.service.MyService" />
         <service
             android:name="com.demo.ycwang.aidlt.messenger.MessengerService"
             android:process=":remote" />
-        <service
-            android:name="com.demo.ycwang.auto_create.MyDaydreamService"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.service.dreams.DreamService" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </service>
-
-
-        <receiver android:name="com.demo.ycwang.auto_create.NewAppWidget">
-            <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-            </intent-filter>
-
-            <meta-data
-                android:name="android.appwidget.provider"
-                android:resource="@xml/new_app_widget_info" />
-        </receiver>
-
     </application>
 
 </manifest>

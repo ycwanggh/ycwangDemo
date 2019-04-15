@@ -1,5 +1,7 @@
 package com.demo.ycwang.core.utils;
 
+import android.text.TextUtils;
+
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
@@ -84,6 +86,84 @@ public class NumUtils {
         DecimalFormat decimalFormat = new DecimalFormat(format);
         decimalFormat.setRoundingMode(mode);
         return decimalFormat.format(value);
+    }
+
+
+    public static byte parseByte(final String s) {
+        if (TextUtils.isEmpty(s)) {
+            return 0;
+        } else {
+            try {
+                return Byte.parseByte(s);
+            } catch (NumberFormatException e) {
+                return 0;
+            }
+        }
+    }
+
+
+    public static short parseShort(final String s) {
+        if (TextUtils.isEmpty(s)) {
+            return 0;
+        } else {
+            try {
+                return Short.parseShort(s);
+            } catch (NumberFormatException e) {
+                return 0;
+            }
+        }
+    }
+
+
+    public static int parseInt(final String s) {
+        if (TextUtils.isEmpty(s)) {
+            return 0;
+        } else {
+            try {
+                return Integer.parseInt(s);
+            } catch (NumberFormatException e) {
+                return 0;
+            }
+        }
+    }
+
+
+    public static long parseLong(final String s) {
+        if (TextUtils.isEmpty(s)) {
+            return 0L;
+        } else {
+            try {
+                return Long.parseLong(s);
+            } catch (NumberFormatException e) {
+                return 0L;
+            }
+        }
+    }
+
+
+    public static float parseFloat(final String s) {
+        if (TextUtils.isEmpty(s)) {
+            return 0F;
+        } else {
+            try {
+                return Float.parseFloat(s);
+            } catch (NumberFormatException e) {
+                return 0F;
+            }
+        }
+    }
+
+
+    public static double parseDouble(final String s) {
+        if (TextUtils.isEmpty(s)) {
+            return 0D;
+        } else {
+            try {
+                return Double.parseDouble(s);
+            } catch (NumberFormatException e) {
+                return 0D;
+            }
+        }
     }
 
 }

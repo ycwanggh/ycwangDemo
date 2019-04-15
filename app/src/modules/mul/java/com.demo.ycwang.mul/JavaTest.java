@@ -13,9 +13,6 @@ import java.math.BigDecimal;
 public class JavaTest {
 
 
-
-
-
     public static double[] getComplexAmount(double AMOUNT, double RATE, int N) {
         double result[] = new double[2];
         BigDecimal bigDecimalM = new BigDecimal(AMOUNT);
@@ -34,14 +31,11 @@ public class JavaTest {
     public static double[] getOneComplexAmount(double AMOUNT, double RATE, int N) {
         double result[] = new double[2];
         BigDecimal bigDecimalM = new BigDecimal(AMOUNT);
-
         double decRate = CalculateUtils.add(1, RATE);
-
         for (int i = 1; i < N; i++) {
             decRate *= (1 + RATE);
         }
         double allAmount = CalculateUtils.mul(bigDecimalM.doubleValue(), decRate);
-
         result[0] = allAmount;
         result[1] = AMOUNT;
         return result;
