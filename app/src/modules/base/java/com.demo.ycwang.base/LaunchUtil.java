@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 
 import com.demo.ycwang.aidlt.BookManagerActivity;
-import com.demo.ycwang.auto_create.ui_compoment_fragment.ItemActivity;
 import com.demo.ycwang.custom.animation.AnimationActivity;
 import com.demo.ycwang.custom.edittext.SpaceEditTextActivity;
 import com.demo.ycwang.custom.view.imgcrop.ImageCropActivity;
@@ -99,11 +98,6 @@ public class LaunchUtil {
 
     public static void launchStorageUtils(Context context) {
         Intent intent = new Intent(context, StorageActivity.class);
-        context.startActivity(intent);
-    }
-
-    public static void launchItemListFragment(Context context) {
-        Intent intent = new Intent(context, ItemActivity.class);
         context.startActivity(intent);
     }
 

@@ -2,16 +2,13 @@ package com.demo.ycwang.base;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import com.demo.ycwang.ycwangdemo.R;
-import com.demo.ycwang.ycwangdemo.auto_create.ItemListDialogFragment;
-import com.demo.ycwang.ycwangdemo.auto_create.ui_componment_notification.NewMessageNotification;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MainActivity extends AppCompatActivity implements ItemListDialogFragment.Listener {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +16,6 @@ public class MainActivity extends AppCompatActivity implements ItemListDialogFra
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
     }
-
 
     @OnClick(R.id.txw_edit)
     void onClickEdit() {
@@ -76,7 +72,6 @@ public class MainActivity extends AppCompatActivity implements ItemListDialogFra
         LaunchUtil.launchData(this);
     }
 
-
     @OnClick(R.id.txw_mvp)
     void onClickMVP() {
         LaunchUtil.launchMVP(this);
@@ -92,32 +87,10 @@ public class MainActivity extends AppCompatActivity implements ItemListDialogFra
         LaunchUtil.launchStorageUtils(this);
     }
 
-    @OnClick(R.id.txw_list_dialog_from_bottom)
-    void onClickListDialogFromBottom() {
-        ItemListDialogFragment.newInstance(5).show(getSupportFragmentManager(), "dialog");
-        /**
-         * //{@link #onItemClicked(int)}
-         */
-    }
-
-    @OnClick(R.id.txw_list_fragment)
-    void onClickListFragment() {
-        LaunchUtil.launchItemListFragment(this);
-    }
-
     @OnClick(R.id.txw_layout_test)
     void onClickLayoutTest() {
         LaunchUtil.launchSerVice(this);
     }
 
-    @OnClick(R.id.txw_notification_auto)
-    void onClickNotificationAuto() {
-        NewMessageNotification.notify(this, "XXXXXXXXXX", 5);
-    }
-
-    @Override
-    public void onItemClicked(int position) {
-        Toast.makeText(getApplicationContext(), "OnItemCLicked", Toast.LENGTH_SHORT).show();
-    }
 
 }
