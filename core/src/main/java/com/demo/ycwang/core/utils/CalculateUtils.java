@@ -1,4 +1,4 @@
-package com.demo.ycwang.mul;
+package com.demo.ycwang.core.utils;
 
 import java.math.BigDecimal;
 
@@ -60,22 +60,5 @@ public class CalculateUtils {
         BigDecimal b2 = new BigDecimal(Double.toString(v2));
         return b1.divide(b2, scale, BigDecimal.ROUND_HALF_UP).doubleValue();
     }
-
-    /**
-     * 四舍五入
-     *
-     * @param v
-     * @param scale 精确位数
-     * @return
-     */
-    public static double round(double v, int scale) {
-        if (scale < 0) {
-            throw new IllegalArgumentException("The scale must be a positive integer or zero");
-        }
-        BigDecimal b = new BigDecimal(Double.toString(v));
-        BigDecimal one = new BigDecimal("1");
-        return b.divide(one, scale, BigDecimal.ROUND_HALF_UP).doubleValue();
-    }
-
 
 }
