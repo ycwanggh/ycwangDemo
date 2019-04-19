@@ -20,11 +20,11 @@
         android:theme="@style/AppTheme">
 
         <activity android:name="com.demo.ycwang.base.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
         </activity>
         <activity
             android:name="com.demo.ycwang.custom.tab.TabActivity"
@@ -50,6 +50,13 @@
         <activity android:name="com.demo.ycwang.custom.recylerview.RecyclerViewActivity" />
         <activity android:name="com.demo.ycwang.custom.niotifcation.NotificationActivity" />
         <activity android:name="com.demo.ycwang.custom.viewdraghelper.ViewDragHelperActivity" />
+        <activity android:name="com.demo.ycwang.custom.colortextview.ColorTextViewTestActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <service android:name="com.demo.ycwang.service.MyService" />
         <service

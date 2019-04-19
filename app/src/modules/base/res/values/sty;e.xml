@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ColorTextView" >
+        <attr name="strokeWidth" format="dimension" />
+        <attr name="cornerRadius" format="dimension" />
+        <attr name="topRightCornerRadius" format="dimension" />
+        <attr name="topLeftCornerRadius" format="dimension" />
+        <attr name="bottomRightCornerRadius" format="dimension" />
+        <attr name="bottomLeftCornerRadius" format="dimension" />
+
+        <attr name="strokeColor" format="color" />
+        <attr name="backgroundColor" format="color" />
+        <attr name="ctTextColor" format="color" />
+
+
+        <attr name="stroke_color_disable" format="color" />
+        <attr name="background_color_disable" format="color" />
+        <attr name="ct_text_color_disable" format="color" />
+
+
+        <attr name="isEnable" format="boolean" />
+    </declare-styleable>
+
+</resources>
