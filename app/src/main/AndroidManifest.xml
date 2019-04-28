@@ -51,6 +51,20 @@
         <activity android:name="com.demo.ycwang.custom.niotifcation.NotificationActivity" />
         <activity android:name="com.demo.ycwang.custom.viewdraghelper.ViewDragHelperActivity" />
         <activity android:name="com.demo.ycwang.custom.colortextview.ColorTextViewTestActivity" >
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity android:name="com.demo.ycwang.dispatch.MyViewDispatchActivity" >
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity android:name="com.demo.ycwang.dispatch.CustomListViewActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
