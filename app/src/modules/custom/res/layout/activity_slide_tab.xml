@@ -7,7 +7,7 @@
     <include layout="@layout/title_toolbar" />
 
 
-    <android.support.v4.widget.DrawerLayout
+    <androidx.core.widget.DrawerLayout
         android:id="@+id/draw_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -45,7 +45,7 @@
         </LinearLayout>
 
 
-    </android.support.v4.widget.DrawerLayout>
+    </androidx.core.widget.DrawerLayout>
 
 
 </LinearLayout>

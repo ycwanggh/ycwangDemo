@@ -1,17 +1,18 @@
 package com.demo.ycwang.custom.tab;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 
 import com.demo.ycwang.ycwangdemo.R;
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
 public class TabActivity extends AppCompatActivity {
 
@@ -30,7 +31,6 @@ public class TabActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.viewPager);
 
         initViewPager();
-
     }
 
     private void initViewPager() {

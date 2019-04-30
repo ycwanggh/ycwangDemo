@@ -11,8 +11,7 @@ import android.widget.TextView;
 import com.demo.ycwang.ycwangdemo.R;
 
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
+
 
 /**
  * @Description:
@@ -21,24 +20,23 @@ import butterknife.ButterKnife;
  */
 public class MulActivity extends Activity {
 
-    @BindView(R.id.edx_rate)
     EditText edxRate;
-    @BindView(R.id.edx_amount)
     EditText edxAmount;
-    @BindView(R.id.edx_n)
     EditText edxN;
-    @BindView(R.id.txw_result)
     TextView txwResult;
-    @BindView(R.id.btn_in)
     Button btnIn;
-    @BindView(R.id.btn_qu)
     Button btnQu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mul);
-        ButterKnife.bind(this);
+        edxRate=findViewById(R.id.edx_rate);
+        edxAmount=findViewById(R.id.edx_amount);
+        edxN=findViewById(R.id.edx_n);
+        txwResult=findViewById(R.id.txw_result);
+        btnIn=findViewById(R.id.btn_in);
+        btnQu=findViewById(R.id.btn_qu);
 
 
         btnIn.setOnClickListener(new View.OnClickListener() {

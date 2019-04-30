@@ -2,14 +2,16 @@ package com.demo.ycwang.custom.viewdraghelper;
 
 import android.content.Context;
 import android.graphics.Point;
-import android.support.annotation.NonNull;
-import android.support.constraint.ConstraintLayout;
-import android.support.v4.widget.ViewDragHelper;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
+
 import com.demo.ycwang.ycwangdemo.R;
+
+import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.customview.widget.ViewDragHelper;
 
 /**
  * @Author: ycwang
@@ -111,6 +113,7 @@ public class DirectionDragLayout extends ConstraintLayout {
         super.computeScroll();
         if (viewDragHelper.continueSettling(true)) {
             invalidate();
+
         }
     }
 

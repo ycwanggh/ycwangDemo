@@ -3,11 +3,12 @@ package com.demo.ycwang.custom.animation;
 import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.RequiresApi;
 import android.view.View;
 import android.widget.TextView;
 
 import com.demo.ycwang.ycwangdemo.R;
+
+import androidx.annotation.RequiresApi;
 
 /**
  * @Author: ycwang

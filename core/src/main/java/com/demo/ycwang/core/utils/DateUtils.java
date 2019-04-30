@@ -1,6 +1,5 @@
 package com.demo.ycwang.core.utils;
 
-import android.support.annotation.NonNull;
 import android.text.TextUtils;
 
 import java.text.DateFormat;
@@ -10,6 +9,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Locale;
+
+import androidx.annotation.NonNull;
 
 /**
  * @Description:

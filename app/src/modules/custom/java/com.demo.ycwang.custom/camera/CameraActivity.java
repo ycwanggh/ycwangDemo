@@ -13,8 +13,9 @@ import android.hardware.camera2.CameraManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.RequiresApi;
-import android.support.v4.app.ActivityCompat;
+
+import androidx.annotation.RequiresApi;
+import androidx.core.app.ActivityCompat;
 
 /**
  * @Description:

@@ -3,9 +3,11 @@
 package com.demo.ycwang.custom.view.imgcrop.util;
 
 import android.graphics.PointF;
-import android.support.annotation.NonNull;
+
 
 import com.demo.ycwang.custom.view.imgcrop.handle.CropWindowEdgeSelector;
+
+import androidx.annotation.NonNull;
 
 
 /***

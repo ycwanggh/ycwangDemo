@@ -2,13 +2,14 @@ package com.demo.ycwang.custom.edittext;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.v7.widget.AppCompatEditText;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
 
 import com.demo.ycwang.ycwangdemo.R;
+
+import androidx.appcompat.widget.AppCompatEditText;
 
 public class SpaceEditText extends AppCompatEditText {
 

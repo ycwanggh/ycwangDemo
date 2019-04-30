@@ -12,18 +12,20 @@ import android.graphics.PointF;
 import android.graphics.RectF;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.NonNull;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-import android.widget.ImageView;
+
 
 import com.demo.ycwang.custom.view.imgcrop.edge.Edge;
 import com.demo.ycwang.custom.view.imgcrop.handle.CropWindowEdgeSelector;
 import com.demo.ycwang.custom.view.imgcrop.util.CatchEdgeUtil;
 import com.demo.ycwang.core.utils.SizeUtils;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.widget.AppCompatImageView;
 
-public class CropImageView extends ImageView {
+
+public class CropImageView extends AppCompatImageView {
 
     //裁剪框边框画笔
     private Paint mBorderPaint;

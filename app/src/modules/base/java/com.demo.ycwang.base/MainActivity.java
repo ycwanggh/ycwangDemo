@@ -1,12 +1,13 @@
 package com.demo.ycwang.base;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 import com.demo.ycwang.ycwangdemo.R;
 
-import butterknife.ButterKnife;
-import butterknife.OnClick;
+import androidx.appcompat.app.AppCompatActivity;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,83 +15,126 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
-    }
 
-    @OnClick(R.id.txw_edit)
-    void onClickEdit() {
-        LaunchUtil.launchSpaceEditText(this);
-    }
+        TextView txw_edit = findViewById(R.id.txw_edit);
+        txw_edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LaunchUtil.launchSpaceEditText(MainActivity.this);
+            }
+        });
 
-    @OnClick(R.id.txw_recycler_view)
-    void onClickRecyclerView() {
-        LaunchUtil.launchRecyclerView(this);
-    }
+        TextView txw_notification = findViewById(R.id.txw_notification);
+        txw_notification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LaunchUtil.launchNotification(MainActivity.this);
+            }
+        });
 
-    @OnClick(R.id.txw_slidingtray)
-    void onClickSlideTray() {
-        LaunchUtil.launchSlidingTray(this);
-    }
+        TextView txw_mvp = findViewById(R.id.txw_mvp);
+        txw_mvp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LaunchUtil.launchMVP(MainActivity.this);
+            }
+        });
 
-    @OnClick(R.id.txw_tab)
-    void onClickTab() {
-        LaunchUtil.launchTab(this);
-    }
+        TextView txw_data = findViewById(R.id.txw_data);
+        txw_data.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LaunchUtil.launchData(MainActivity.this);
+            }
+        });
 
-    @OnClick(R.id.txw_view_drag_helper)
-    void onClickViewDragHelper() {
-        LaunchUtil.launchViewDragHelper(this);
-    }
+        TextView txw_text_utils = findViewById(R.id.txw_text_utils);
+        txw_text_utils.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LaunchUtil.launchTextUtils(MainActivity.this);
+            }
+        });
 
-    @OnClick(R.id.txw_slide_tab)
-    void onClickSlideTab() {
-        LaunchUtil.launchSlideTab(this);
-    }
+        TextView txw_animation = findViewById(R.id.txw_animation);
+        txw_animation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LaunchUtil.launchAnimation(MainActivity.this);
+            }
+        });
 
-    @OnClick(R.id.txw_image_crop)
-    void onClickCropImage() {
-        LaunchUtil.launchCropImage(this);
-    }
+        TextView txw_key_board = findViewById(R.id.txw_key_board);
+        txw_key_board.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LaunchUtil.launchKeyBoard(MainActivity.this);
+            }
+        });
 
-    @OnClick(R.id.txw_key_board)
-    void onClickKeyBoard() {
-        LaunchUtil.launchKeyBoard(this);
-    }
+        TextView txw_image_crop = findViewById(R.id.txw_image_crop);
+        txw_image_crop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LaunchUtil.launchCropImage(MainActivity.this);
+            }
+        });
 
-    @OnClick(R.id.txw_animation)
-    void onClickAnimation() {
-        LaunchUtil.launchAnimation(this);
-    }
+        TextView txw_slide_tab = findViewById(R.id.txw_slide_tab);
+        txw_slide_tab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LaunchUtil.launchSlideTab(MainActivity.this);
+            }
+        });
 
-    @OnClick(R.id.txw_text_utils)
-    void onClickTextUtils() {
-        LaunchUtil.launchTextUtils(this);
-    }
+        TextView txw_view_drag_helper = findViewById(R.id.txw_view_drag_helper);
+        txw_view_drag_helper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LaunchUtil.launchViewDragHelper(MainActivity.this);
+            }
+        });
 
-    @OnClick(R.id.txw_data)
-    void onClickData() {
-        LaunchUtil.launchData(this);
-    }
+        TextView txw_tab = findViewById(R.id.txw_tab);
+        txw_tab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LaunchUtil.launchTab(MainActivity.this);
+            }
+        });
 
-    @OnClick(R.id.txw_mvp)
-    void onClickMVP() {
-        LaunchUtil.launchMVP(this);
-    }
+        TextView txw_slidingtray = findViewById(R.id.txw_slidingtray);
+        txw_slidingtray.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LaunchUtil.launchSlidingTray(MainActivity.this);
+            }
+        });
 
-    @OnClick(R.id.txw_notification)
-    void onClickNotification() {
-        LaunchUtil.launchNotification(this);
-    }
+        TextView txw_recycler_view = findViewById(R.id.txw_recycler_view);
+        txw_recycler_view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LaunchUtil.launchRecyclerView(MainActivity.this);
+            }
+        });
 
-    @OnClick(R.id.txw_storage)
-    void onClickStorageUtils() {
-        LaunchUtil.launchStorageUtils(this);
-    }
+        TextView txw_storage = findViewById(R.id.txw_storage);
+        txw_storage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LaunchUtil.launchStorageUtils(MainActivity.this);
+            }
+        });
 
-    @OnClick(R.id.txw_layout_test)
-    void onClickLayoutTest() {
-        LaunchUtil.launchSerVice(this);
+        TextView txw_layout_test = findViewById(R.id.txw_layout_test);
+        txw_layout_test.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LaunchUtil.launchSerVice(MainActivity.this);
+            }
+        });
     }
-
 
 }

@@ -1,9 +1,10 @@
 package com.demo.ycwang.core.mvp;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 
 import com.demo.ycwang.core.view.base.BaseActivity;
+
+import androidx.annotation.Nullable;
 
 /**
  * @Author: ycwang

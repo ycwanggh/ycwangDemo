@@ -9,11 +9,12 @@ import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.RoundRectShape;
-import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 
 import com.demo.ycwang.ycwangdemo.R;
+
+import androidx.appcompat.widget.AppCompatTextView;
 
 
 /**

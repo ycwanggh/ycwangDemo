@@ -44,7 +44,6 @@ public class HttpUtils {
     private static API getAPI() {
         return new Retrofit.Builder()
                 .baseUrl(BuildConfig.BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
                 .client(getOkHttpClient())
                 .build()
                 .create(API.class);

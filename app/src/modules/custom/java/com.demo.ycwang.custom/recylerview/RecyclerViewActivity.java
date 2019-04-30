@@ -2,11 +2,6 @@ package com.demo.ycwang.custom.recylerview;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,9 +13,11 @@ import com.demo.ycwang.ycwangdemo.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.ItemTouchHelper;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 
 /**
@@ -43,7 +40,7 @@ public class RecyclerViewActivity extends Activity {
         adapter = new HomeAdapter();
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        layoutManager.setOrientation(RecyclerView.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.addItemDecoration(new TestItemDecoration());
         recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -68,18 +65,25 @@ public class RecyclerViewActivity extends Activity {
         });
 
         recyclerView.setAdapter(adapter);
-    }
 
 
-    @OnClick(R.id.btn_a)
-    void onClickA() {
-        adapter.addData(4);
+        TextView btn_a = findViewById(R.id.btn_a);
+        btn_a.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                adapter.addData(4);
+            }
+        });
+        TextView btn_b = findViewById(R.id.btn_b);
+        btn_b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                adapter.removeData(4);
+            }
+        });
+
     }
 
-    @OnClick(R.id.btn_b)
-    void onClickB() {
-        adapter.removeData(4);
-    }
 
     private void initData() {
         list = new ArrayList<>();
@@ -123,12 +127,11 @@ public class RecyclerViewActivity extends Activity {
 
         public class HomeViewHolder extends RecyclerView.ViewHolder {
 
-            @BindView(R.id.txw)
             TextView tv;
 
             public HomeViewHolder(View itemView) {
                 super(itemView);
-                ButterKnife.bind(this, itemView);
+                tv = itemView.findViewById(R.id.txw);
             }
 
             public void bind(String item) {
