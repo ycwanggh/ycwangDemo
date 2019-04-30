@@ -57,20 +57,20 @@ public final class FileUtils {
     /**
      * 删除File代表的路径或者文件。
      */
-    public static void deleteFile(final File file) {
-        if (file != null) {
-            if (file.isDirectory()) {
-                final File[] files = file.listFiles();
-                if (files != null) {
-                    for (final File file1 : files) {
-                        deleteFile(file1);
-                    }
+    public static boolean deleteFile(final File file) {
+        if (file == null) {
+            return false;
+        }
+        if (file.isDirectory()) {
+            final File[] files = file.listFiles();
+            if (files != null) {
+                for (final File file1 : files) {
+                    deleteFile(file1);
                 }
-                file.delete();
-            } else {
-                file.delete();
             }
         }
+        return file.delete();
+
     }
 
     /**
@@ -86,6 +86,9 @@ public final class FileUtils {
     }
 
     /**
+     * 当你遇到IO的时候，就想两件事，第一，我的内存是中心，第二看看流的方向
+     * 只是想是内存的数据出去了就是out 外设的东西到内存了就IN了
+     *
      * 将输入流的数据写入到指定文件，写入完成之后会关闭输入流。
      */
     public static boolean writeInputToDisk(final InputStream inputStream, final String savePath) {
@@ -117,13 +120,11 @@ public final class FileUtils {
                 result = false;
             } finally {
                 try {
-                    if (inputStream != null) {
-                        inputStream.close();
-                    }
+                    inputStream.close();
                     if (outputStream != null) {
                         outputStream.close();
                     }
-                } catch (final IOException e) {
+                } catch (final IOException ignored) {
 
                 }
             }
