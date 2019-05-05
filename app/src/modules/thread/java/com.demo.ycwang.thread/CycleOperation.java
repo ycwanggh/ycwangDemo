@@ -1,4 +1,4 @@
-package com.demo.ycwang.ycwangdemo.cycle;
+package com.demo.ycwang.thread;
 
 import java.util.Timer;
 

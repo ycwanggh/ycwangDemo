@@ -1,4 +1,4 @@
-package com.demo.ycwang.ycwangdemo.thread;
+package com.demo.ycwang.thread;
 
 import java.util.concurrent.TimeUnit;
 

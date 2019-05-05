@@ -1,4 +1,4 @@
-package com.demo.ycwang.ycwangdemo.mvp.base;
+package com.demo.ycwang.mvp.base;
 
 /**
  * @Author: ycwang
