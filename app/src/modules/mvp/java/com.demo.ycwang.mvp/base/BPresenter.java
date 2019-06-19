@@ -9,7 +9,7 @@ import com.demo.ycwang.core.mvp.BasePresenter;
  */
 public class BPresenter<T extends BaseContract.View, E extends BaseContract.Model>
         extends BasePresenter<T, E>
-        implements com.demo.ycwang.ycwangdemo.mvp.base.PresenterLife {
+        implements PresenterLife {
 
     @Override
     public boolean isEnd() {

@@ -5,7 +5,7 @@ import com.demo.ycwang.core.mvp.BaseContract;
 import com.demo.ycwang.data.remote.callback.DataCallBack;
 import com.demo.ycwang.data.remote.callback.Result;
 import com.demo.ycwang.data.remote.module.member.response.UserBean;
-import com.demo.ycwang.ycwangdemo.mvp.base.PresenterLife;
+import com.demo.ycwang.mvp.base.PresenterLife;
 
 /**
  * @Author: ycwang
