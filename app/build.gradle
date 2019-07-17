@@ -87,8 +87,17 @@ android {
         disable 'GoogleAppIndexingWarning'
     }
 
-    sourceSets {
+    flavorDimensions "stage"
+    productFlavors {
+        dev {
+            dimension "stage"
+        }
+        prod {
+            dimension "stage"
+        }
+    }
 
+    sourceSets {
         file("src/modules").list().each { dir ->
             main.java.srcDirs += [
                     "src/modules/${dir}/java"
@@ -98,16 +107,13 @@ android {
             ]
         }
         main {
-
             aidl.srcDirs = ['folder/aidl']
-//            Changes the directory for Java sources. The default directory is 'src/main/java'.
-//            java.srcDirs = ['src/main/java', 'src/main/module/home/java', 'other/java','other2/java','src/module/other3/java']
-//            Changes the directory for res resources. The default directory is 'src/main/res'.
-//            res.srcDirs = ['src/main/res', 'src/main/module/home/res', 'other/res','other2/res','src/module/other3/res']
-//            assets.srcDirs = ['src/main/assets', 'folder/assert']
-//            jni.srcDirs = ['src/main/jni', 'folder/jni']
         }
     }
+
+
+
+
 }
 
 dependencies {

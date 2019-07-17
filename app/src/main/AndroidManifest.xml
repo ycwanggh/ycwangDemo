@@ -19,13 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name="com.demo.ycwang.base.MainActivity">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
-        </activity>
         <activity
             android:name="com.demo.ycwang.custom.tab.TabActivity"
             android:theme="@style/Theme.Design.NoActionBar" />
@@ -33,14 +27,15 @@
             android:name="com.demo.ycwang.custom.slidetab.SlideTabActivity"
             android:theme="@style/Theme.Design.NoActionBar" />
         <activity android:name="com.demo.ycwang.mul.MulActivity" />
+        <activity android:name="com.demo.ycwang.base.MainActivity" />
         <activity android:name="com.demo.ycwang.data.DataActivity" />
         <activity android:name="com.demo.ycwang.util.StorageActivity" />
         <activity android:name="com.demo.ycwang.mvp.PresenterActivity" />
         <activity android:name="com.demo.ycwang.thread.HandlerActivity" />
         <activity android:name="com.demo.ycwang.service.TestServiceClass" />
         <activity android:name="com.demo.ycwang.aidlt.BookManagerActivity" />
-        <activity android:name="com.demo.ycwang.custom.layout.LayoutTestActivity" />
         <activity android:name="com.demo.ycwang.custom.keyboard.KeyBoardActivity" />
+        <activity android:name="com.demo.ycwang.custom.layout.LayoutTestActivity" />
         <activity android:name="com.demo.ycwang.aidlt.messenger.MessengerActivity" />
         <activity android:name="com.demo.ycwang.custom.animation.AnimationActivity" />
         <activity android:name="com.demo.ycwang.util.textutils.TextUtilsCopyActivity" />
@@ -50,21 +45,14 @@
         <activity android:name="com.demo.ycwang.custom.recylerview.RecyclerViewActivity" />
         <activity android:name="com.demo.ycwang.custom.niotifcation.NotificationActivity" />
         <activity android:name="com.demo.ycwang.custom.viewdraghelper.ViewDragHelperActivity" />
-        <activity android:name="com.demo.ycwang.custom.colortextview.ColorTextViewTestActivity" >
+        <activity android:name="com.demo.ycwang.custom.colortextview.ColorTextViewTestActivity">
             <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
+            <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
             <!--</intent-filter>-->
         </activity>
-        <activity android:name="com.demo.ycwang.dispatch.MyViewDispatchActivity" >
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
-
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
-        </activity>
-        <activity android:name="com.demo.ycwang.dispatch.CustomListViewActivity" >
+        <activity android:name="com.demo.ycwang.dispatch.CustomListViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -76,6 +64,7 @@
         <service
             android:name="com.demo.ycwang.aidlt.messenger.MessengerService"
             android:process=":remote" />
+
     </application>
 
 </manifest>

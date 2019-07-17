@@ -15,6 +15,6 @@
         layout="@layout/include_test" />
 
 
-    <include layout="@layout/include_relative"/>
+    <include layout="@layout/include_relative" />
 
 </LinearLayout>
