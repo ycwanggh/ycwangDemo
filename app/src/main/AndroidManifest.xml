@@ -10,6 +10,10 @@
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:name="com.demo.ycwang.base.App"
         android:allowBackup="true"
@@ -27,7 +31,7 @@
             android:name="com.demo.ycwang.custom.slidetab.SlideTabActivity"
             android:theme="@style/Theme.Design.NoActionBar" />
         <activity android:name="com.demo.ycwang.mul.MulActivity" />
-        <activity android:name="com.demo.ycwang.base.MainActivity" />
+
         <activity android:name="com.demo.ycwang.data.DataActivity" />
         <activity android:name="com.demo.ycwang.util.StorageActivity" />
         <activity android:name="com.demo.ycwang.mvp.PresenterActivity" />
@@ -45,14 +49,16 @@
         <activity android:name="com.demo.ycwang.custom.recylerview.RecyclerViewActivity" />
         <activity android:name="com.demo.ycwang.custom.niotifcation.NotificationActivity" />
         <activity android:name="com.demo.ycwang.custom.viewdraghelper.ViewDragHelperActivity" />
-        <activity android:name="com.demo.ycwang.custom.colortextview.ColorTextViewTestActivity">
+        <activity android:name="com.demo.ycwang.dispatch.CustomListViewActivity" />
+        <activity android:name="com.demo.ycwang.base.MainActivity">
             <!--<intent-filter>-->
             <!--<action android:name="android.intent.action.MAIN" />-->
 
             <!--<category android:name="android.intent.category.LAUNCHER" />-->
             <!--</intent-filter>-->
         </activity>
-        <activity android:name="com.demo.ycwang.dispatch.CustomListViewActivity">
+        <activity android:name="com.demo.ycwang.custom.colortextview.ColorTextViewTestActivity" />
+        <activity android:name="com.ycwang.read.sms.ReadSmsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
