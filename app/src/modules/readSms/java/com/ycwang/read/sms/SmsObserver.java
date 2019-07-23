@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.ContentObserver;
 import android.database.Cursor;
 import android.net.Uri;
-import android.util.Log;
 
 /***
  * 短信接收观察者
@@ -86,18 +85,13 @@ public class SmsObserver extends ContentObserver {
                     String address = c.getString(c.getColumnIndex("address"));
                     String body = c.getString(c.getColumnIndex("body"));
                     if (mHandler != null) {
-                        mHandler.obtainMessage(MSG_RECEIVED_CODE, new String[]{address, body})
-                                .sendToTarget();
+                        mHandler.obtainMessage(MSG_RECEIVED_CODE, new String[]{address, body}).sendToTarget();
                     }
-                    Log.i("VVV", "发件人为：" + address + " " + "短信内容为：" + body);
                 }
                 c.close();
             }
-        } catch (SecurityException e) {
-            Log.e("VVV", "获取短信权限失败", e);
-        } catch (Exception e) {
-            Log.e("VVV", "VVV获取短信权限失败", e);
-            e.printStackTrace();
+        } catch (Exception ignored) {
+
         }
     }
 

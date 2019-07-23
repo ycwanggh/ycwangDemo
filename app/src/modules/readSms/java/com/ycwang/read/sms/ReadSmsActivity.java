@@ -30,13 +30,11 @@ public class ReadSmsActivity extends Activity {
         setContentView(R.layout.activity_sms_read);
         edtPassword = findViewById(R.id.password);
 
-
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_SMS) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this,
                     new String[]{Manifest.permission.READ_SMS},
                     MY_PERMISSIONS_REQUEST_CALL_PHONE);
         }
-
 
         smsObserver.registerSMSObserver();
     }

@@ -36,12 +36,12 @@ class SmsHandler extends Handler {
     public void handleMessage(Message msg) {
         super.handleMessage(msg);
         if (msg.what == SmsObserver.MSG_RECEIVED_CODE) {
-            String[] smsInfos = (String[]) msg.obj;
-            if (smsInfos != null && smsInfos.length == 2 && mCallback != null) {
+            String[] smsMessage = (String[]) msg.obj;
+            if (smsMessage != null && smsMessage.length == 2 && mCallback != null) {
                 if (smsFilter == null) {
                     smsFilter = new DefaultSmsFilter();
                 }
-                mCallback.onCallbackSmsContent(smsFilter.filter(smsInfos[0], smsInfos[1]));
+                mCallback.onCallbackSmsContent(smsFilter.filter(smsMessage[0], smsMessage[1]));
             }
         }
     }
